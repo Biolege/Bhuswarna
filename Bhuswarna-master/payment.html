@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Payment
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body style="background-color: aliceblue;">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-8 py-4 pb-5 pl-4 mt-3" style="background-color: white; border-radius: 10px;">
+                    <h3>Payment</h3>
+                    <hr style="height:0.5px;border-width:0;background-color:#EBEBEB">
+                    <div class="row">
+                        <div class="col-4">
+                             Choose a payment option
+                         </div>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-4 mr-auto mt-5">
+                                    <div class="custom-control custom-radio">
+                                         <input type="radio" class="custom-control-input" id="customRadio1" name="payment">
+                                         <label class="custom-control-label" for="customRadio1">Cash on Delivery(COD)</label>
+                                </div>
+                            </div>
+                            <div class="col-2 ml-auto mt-5">
+                                <a href="#">
+                                    <button class="btn btn-primary btn-sm px-4">Done</button>
+                                </a>
+                            </div>  
+                            </div>    
+                            <div class="row">
+                                <div class="col-12">
+                                    <hr style="height:0.5px;border-width:0;background-color:#EBEBEB">
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <div class="col-8 mt-5">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="customRadio2" name="payment">
+                                        <label class="custom-control-label" for="customRadio2">Debit Card</label>
+                                    </div> 
+                                    <br>
+                                    <div class="dropdown ml-4">
+                                        <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+                                            Choose Bank
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">State Bank of India</a>
+                                            <a class="dropdown-item" href="#">ICICI Bank</a>
+                                            <a class="dropdown-item" href="#">Axis Bank</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <hr style="height:0.5px;border-width:0;background-color:#EBEBEB">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8 mt-5">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="customRadio3" name="payment">
+                                        <label class="custom-control-label" for="customRadio3">Credit Card</label>
+                                    </div> 
+                                    <a href="#">
+                                        <button class="btn btn-light btn-sm px-4 ml-4 mt-3">VISA</button>
+                                    </a>
+                                    <a href="#">
+                                        <button class="btn btn-light btn-sm px-4 ml-4 mt-3">Master Card</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <hr style="height:0.5px;border-width:0;background-color:#EBEBEB">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <br><br><br><br><br><br>
+                </div>
+                <div class="col-3 offset-md-1 mt-3" style="background-color:aliceblue">
+                    <div class="row py-4 px-4 pb-5" style="background-color: white; border-radius: 10px;">
+                        <div class="col-12">
+                            <h6>Laboratory</h6>
+                            <div class="row">
+                                <div class="col-9 ml-3 rectangle" style="width: 195px; height: 23px;background: #F1F7FF; border-radius: 5px;"></div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-9">
+                                    <h6>Sample Pickup</h6>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-6">
+                                    Date <input type="date" class="btn btn-sm">
+                                </div>
+                                <div class="col-6">
+                                    Time <input type="time" class="btn btn-sm">
+                                </div>
+                                <div class="col-12">
+                                    <h4>Billing Info</h4>
+                                    <hr style="height:0.5px;border-width:0;background-color:#EBEBEB">
+                                </div>
+                            </div>
+                            <div class="row pr-5">
+                                <div class="col-9">
+                                    Test 1 Price
+                                </div>
+                                <div class="col-2 mr-auto">
+                                    350.00
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-9">
+                                    Test 2 Price
+                                </div>
+                                <div class="col-2 mr-auto">
+                                    450.00
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-9">
+                                    Package Price
+                                </div>
+                                <div class="col-2 mr-auto">
+                                    400.00
+                                </div>
+                                <div class="w-100"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <hr style="height:0.5px;border-width:0;background-color:#EBEBEB">
+                                </div>
+                            </div>
+                            <div class="row pr-5">
+                                <div class="col-9">
+                                    Total Price
+                                </div>
+                                <div class="col-2 mr-auto">
+                                    1200.00
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-9">
+                                    Delivery charge
+                                </div>
+                                <div class="col-2 mr-auto">
+                                    20.00
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="col-9">
+                                    Membership discount
+                                </div>
+                                <div class="col-2 mr-auto">
+                                    -50.00
+                                </div>
+                                <div class="w-100"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <hr style="height:0.5px;border-width:0;background-color:#EBEBEB">
+                                </div>
+                            </div>
+                            <div class="row pr-5">
+                                <div class="col-9">
+                                    Total amount
+                                </div>
+                                <div class="col-2 mr-auto">
+                                    1170.00
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
