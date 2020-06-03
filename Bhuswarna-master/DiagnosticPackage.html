@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Diagnostic Package
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+         <style>
+           body{
+             background-color: #141B41;
+           }
+           hr{
+            height:0.5px;
+            border-width:0;
+            background-color:#EBEBEB;
+           }
+           .inner-bar-line{
+            margin-top: -10px;
+           }
+           .left-pane{
+             background-color: #FF8900;
+           }
+           .right-pane{
+              background-color: white;
+              color: #142B41;
+           }
+           a{
+             color: #141B41;
+           }
+           .create{
+              background-color: #FF8900;
+           }
+           .create:hover{
+              background-color: #FF8900;
+           }
+           .left-items:hover{
+                background-color: #141B41;
+                color: #fff;
+                text-decoration: none;
+                padding-right: 20px;
+            }
+            .titlebar{
+               background-color: #141B41;
+               
+            }
+            .title-item{
+               margin-right: 30px; 
+               color: #fff;
+            }
+            .title-item:hover{
+               color: #fff;
+            }
+           .tests-and-labs{
+              font-size: 36px;
+           }
+           .inner-bar{
+            margin-right: 14px;
+           }
+           .inner-bar:hover{
+              color: #141B41;
+           }
+           .add-lab{
+              margin-bottom: 120px;
+           }
+           .addLab{
+              font-size: 24px;
+           }
+           .inner-link{
+            border-bottom: 1px solid #114411;
+           }
+           .form-control{
+              background-color: #F5F9FF;
+           }
+           .testListArea{
+            background-color: #F5F9FF;
+            border-radius: 5px;
+            box-sizing: border-box;
+            border: 1px solid rgb(212, 213, 214);
+            width: 186px;
+            height: 229px;
+            margin-left: 14px;
+           }
+           @media only screen and (max-width: 768px) {
+               /* For mobile phones: */
+                  [class*="tas"] {
+                  font-size: 12px;
+                  margin-right: 1px;
+                  }
+               }
+        </style>
+    </head>
+    <body>
+        <div class="container mt-sm-5">
+            <div class="row">
+               <div class="col-xs-12 col-lg-2 rounded left-pane mt-sm-5 pb-3">
+                  <div class="col-sm-12 mt-3">
+                     <a class="left-items rounded" href="#">Dashboard</a>
+                     <div class="w-100"></div>
+                     <a class="left-items rounded" href="#">Tests and Labs</a>
+                     <div class="w-100"></div>
+                     <a class="left-items rounded" href="#">Phebotomist</a>
+                     <div class="w-100"></div>
+                     <div class="col-xs-12 col-lg-2">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xs-12 col-lg-9">
+                  <nav class="navbar navbar-expand-sm navbar-dark titlebar">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active title-item tas" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link title-item tas" id="diagnostics-tab" data-toggle="tab" href="#diagnostics" role="tab" aria-controls="diagnotics" aria-selected="false">DIAGNOSTICS</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link title-item tas" id="appointment-tab" data-toggle="tab" href="#appointment" role="tab" aria-controls="appointment" aria-selected="false">APPOINTMENT</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link title-item tas" id="pharmaceutical-tab" data-toggle="tab" href="#pharmaceutical" role="tab" aria-controls="pharmaceutical" aria-selected="false">PHARMACEUTICAL</a>
+                         </li>
+                      </ul>
+                  </nav>
+                  <div class="w-100"></div>
+                  <div class="row">
+                     <div class="col-sm-12 ml-lg-3 right-pane rounded mt-n3">
+                        <div class="col-sm-7 tests-and-labs mt-3">
+                           <b>Tests and Labs</b>
+                        </div>
+                        <div class="col-sm-3 mt-lg-n4 ml-auto">
+                           <a href="#"><svg aria-hidden="true" focusable="false" width=15px height=15px data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg></a>
+                           <button class="btn btn-sm btn-warning rounded-pill create pl-4 pr-4">+ Create</button>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col-sm-12 mt-4 ml-n3">
+                           <nav class="navbar navbar-expand-sm">
+                              <ul class="nav nav-pills">
+                                 <li class="active mr-lg-3"><a class="inner-bar" data-toggle="pill" href="#singleTests">Single Tests</a></li>
+                                 <li class="mr-lg-3"><a class="inner-bar" data-toggle="pill" href="#profiles">Profiles</a></li>
+                                 <li class="mr-lg-3"><a class="inner-bar" data-toggle="pill" href="#packages">Packages</a></li>
+                                 <li class="mr-lg-3"><a class="inner-bar" data-toggle="pill" href="#labs">Labs</a></li>
+                               </ul>
+                           </nav>
+                           <hr class="inner-bar-line">
+                        </div>
+                        <div class="col-sm-12 border border-dark rounded mt-4 add-lab">
+                           <div class="row">
+                              <div class="col-sm-12 mt-4 ml-3">
+                                 <b class="addLab">Create Package</b>
+                                 <hr>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-sm-8 ml-3">
+                                 <div class="row">
+                                    <div class="col-sm-7">
+                                       Profile Name
+                                       <div class="w-100"></div>
+                                       <input class="form-control text rounded mt-2">
+                                    </div>
+                                    <div class="col-sm-4">
+                                       Price
+                                       <div class="w-100"></div>
+                                       <input class="form-control text rounded mt-2">
+                                    </div>                                 
+                                    <div class="w-100"></div>
+                                    <div class="col-sm-7 mt-sm-4">
+                                       Pre Equipment
+                                       <div class="w-100"></div>
+                                       <input class="form-control text rounded mt-2">
+                                    </div>
+                                    <div class="col-sm-4 mt-sm-4">
+                                       Delivery by
+                                       <div class="w-100"></div>
+                                       <input class="form-control text rounded mt-2">
+                                    </div>
+                                    <div class="w-100"></div>
+                                    <div class="col-sm-7 mt-sm-4">
+                                       Parameters
+                                       <div class="w-100"></div>
+                                       <input class="form-control text rounded mt-2">
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-sm-3 ml-3">
+                                 Test List
+                                 <div class="row">
+                                    <div class="col-sm-12 testListArea mt-sm-3">
+                                       <a href="#">+ Add</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="w-100"></div>
+                              <div class="col-sm-11 ml-3 mt-sm-4 mb-4">
+                                 Description
+                                 <div class="w-100"></div>
+                                 <textarea class="form-control rounded mt-2" rows="5" id="comment"></textarea>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>  
+            </div>
+         </div>
+      </body>
+</html>
