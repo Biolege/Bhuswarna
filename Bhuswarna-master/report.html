@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <style>
+         .head-links{
+            background-color: #141B41;
+        }
+        .darkbg{
+            color: white;
+            font-size: 14px;
+        }
+        .darkbg:hover{
+            color: white;
+            text-decoration: none;
+        }
+        .report-delivery-pend{
+            margin-left: 190px;
+        }
+         .reports{
+             font-size: 24px;
+         }
+         .border{
+             border-radius: 1000px;
+         }
+         .input-group-text{
+             background-color: #fff;
+         }
+         .delivered{
+             color: #14DA00;
+         }
+         .pending{
+             color: #DA0000;
+         }
+         .circle1{
+           background-color: #EAEAEA; 
+            width: 45px; 
+            height: 45px;
+       }
+     </style>
+</head>
+<body>
+    <div class="container-fluid head-links mt-sm-4">
+        <div class="row">
+            <div class="col-sm-5 py-sm-2 report-delivery-pend"><a class="darkbg" href=#>Report delivery pending</a></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-sm-4 reports">
+                Reports
+            </div>
+            <div class="col-sm-3 ml-auto">
+               <div class="input-group md-form form-sm form-2">
+                  <input class="form-control my-0 border" type="text" placeholder="Search" aria-label="Search">
+                  <div class="input-group-append">
+                    <span class="input-group-text lighten-3 border" id="basic-text1"><i class="fa fa-search text-grey"
+                     aria-hidden="true"></i></span>
+                  </div>
+                </div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-sm-5 mt-4">
+                Today, 25-01-2020
+            </div>
+        </div>
+        <div class="row mt-4">
+            <table class="table text-center">
+                <tbody>
+                  <tr class="shadow">
+                    <th scope="row"></th>
+                    <td class="py-4">Name</td>
+                    <td class="py-4">Test orders</td>
+                    <td class="py-4">Laboratory</td>
+                    <td class="py-4">Report from Lab</td>
+                    <td class="py-4">Report uploaded</td>
+                    <td class="py-4">Report delivered</td>
+                  </tr>
+                  <tr>
+                    <th class="py-4 mx-auto"><div class="rounded-circle circle1"></div></th>
+                    <td class="py-4">Babur Ahmed</td>
+                    <td class="py-4">TSH,PPBS</td>
+                    <td class="py-4">Thyrocare</td>
+                    <td class="delivered py-4">Delivered</td>
+                    <td class="delivered py-4">Uploaded</td>
+                    <td class="pending py-4">Pending</td>
+                  </tr>
+                  <tr>
+                    <th class="py-4 mx-auto"><div class="rounded-circle circle1"></div></th>
+                    <td class="py-4">Babur Ahmed</td>
+                    <td class="py-4">Uric Acid</td>
+                    <td class="py-4">HAMM</td>
+                    <td class="pending py-4">not delivered</td>
+                    <td class="pending py-4">Pending</td>
+                    <td class="pending py-4">Pending</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+        <div class="row mt-5 ml-1">
+            Yesterday, 24-01-2020
+        </div>
+        <div class="row mt-4">
+            <table class="table text-center">
+                <tbody>
+                  <tr class="shadow">
+                    <th scope="row"></th>
+                    <td class="py-4">Name</td>
+                    <td class="py-4">Test orders</td>
+                    <td class="py-4">Laboratory</td>
+                    <td class="py-4">Report from Lab</td>
+                    <td class="py-4">Report uploaded</td>
+                    <td class="py-4">Report delivered</td>
+                  </tr>
+                  <tr class="py-4">
+                    <th class="py-4 mx-auto"><div class="rounded-circle circle1"></div></th>
+                    <td class="py-4">Babur Ahmed</td>
+                    <td class="py-4">TSH,PPBS</td>
+                    <td class="py-4">Thyrocare</td>
+                    <td class="delivered py-4">Delivered</td>
+                    <td class="delivered py-4">Uploaded</td>
+                    <td class="pending py-4">Pending</td>
+                  </tr>
+                  <tr>
+                    <th class="py-4 mx-auto"><div class="rounded-circle circle1"></div></th>
+                    <td class="py-4">Babur Ahmed</td>
+                    <td class="py-4">Uric Acid</td>
+                    <td class="py-4">HAMM</td>
+                    <td class="pending py-4">not delivered</td>
+                    <td class="pending py-4">Pending</td>
+                    <td class="pending py-4">Pending</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</body>
+</html>
