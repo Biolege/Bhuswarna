@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .my-details{
+            font-size: 36px;
+        }
+        .table{
+            font-size: 16px;
+        }
+        .view{
+            background-color: #fff;
+        }
+        .view:hover{
+            background-color: #fff;
+        }
+        .circle1{
+            background-color: #C4C4C4;
+            width: 213px;
+            height: 213px;
+        }
+        .optional{
+            font-size: 10px;
+        }
+        .minor-heading{
+            font-size: 24px;
+        }
+        .card-header,.card-footer{
+            background-color: #fff;
+            color: #000000;
+        }
+        .dashboard-card{
+            width: 19rem;
+        }
+        .mytotal-card{
+            width: 19rem;
+        }
+        .cash-card{
+            width: 15rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container shadow mt-5">
+        <div class="row">
+            <div class="col-sm-12 mt-4 ml-5 my-details">
+                <b>My details</b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-7 mt-4 ml-5">
+                <table class="table table-borderless">
+                    <tbody>
+                      <tr>
+                        <td class="py-2">Name</td>
+                        <td class="py-2">Agnideep Sengupta</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2">Gender</td>
+                        <td class="py-2">Male</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2">Date of Birth</td>
+                        <td class="py-2">September 04, 1998</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2">Age</td>
+                        <td class="py-2">21</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2">Contact</td>
+                        <td class="py-2">8876977257</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2">E-mail <l class="optional text-muted">(optional)</l></td>
+                        <td class="py-2">agnideepsg02@gmail.com</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2">Blood group</td>
+                        <td class="py-2">A+</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2">ID number</td>
+                        <td class="py-2">BSE01</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2">Role</td>
+                        <td class="py-2">Service executive</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2">Address</td>
+                        <td class="py-2">Golaghat basti, new bazar, Hojai, Assam - 782435</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="col-sm-4 mt-5 ml-auto">
+                <div class="circle1 rounded-circle"></div>
+            </div>
+        </div>
+        <div class="row minor-heading">
+            <div class="col text-muted ml-5 mt-3">
+                Documents
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 ml-5 mt-4">
+                <table class="table table-borderless">
+                    <tbody>
+                      <tr>
+                        <td class="py-2">Certificate</td>
+                        <td class="py-2">
+                            <a href="#"><button class="btn btn-sm btn-light text-muted view px-4 shadow">View</button></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="py-2">PAN Card</td>
+                        <td class="py-2">
+                            <a href="#"><button class="btn btn-sm btn-light text-muted view px-4 shadow">View</button></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="py-2">Aadhar Card</td>
+                        <td class="py-2">
+                            <a href="#"><button class="btn btn-sm btn-light text-muted view px-4 shadow">View</button></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="py-2">License Number</td>
+                        <td class="py-2">
+                            <a href="#"><button class="btn btn-sm btn-light text-muted view px-4 shadow">View</button></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="py-2">Voter ID</td>
+                        <td class="py-2">
+                            <a href="#"><button class="btn btn-sm btn-light text-muted view px-4 shadow">View</button></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row minor-heading">
+            <div class="col-sm-2 ml-5">
+                Dashboard
+            </div>
+            <div class="col-sm-3 mr-n2 ml-auto">
+                April 24, 2020
+                 <svg aria-hidden="true" focusable="false" data-prefix="far" width="1em" height="1em" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path></svg>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-11 ml-5 mt-4">
+                <table class="table table-borderless">
+                    <tbody>
+                      <tr>
+                        <td class="py-2">
+                            <div class="card dashboard-card mb-sm-4 pb-5 shadow border-0">
+                                <div class="card-header text-left border-0">Today’s orders</di>
+                            </div>
+                        </td>
+                        <td class="py-2">
+                            <div class="card dashboard-card mb-sm-4 pb-5 shadow border-0">
+                                <div class="card-header text-left border-0">Sample collected</div>
+                            </div>
+                        </td>
+                        <td class="py-2">
+                            <div class="card dashboard-card mb-sm-4 pb-5 shadow border-0">
+                                <div class="card-header text-left border-0">Sample collection pending</div>
+                            </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="py-2">
+                            <div class="card dashboard-card mb-sm-4 pb-5 shadow border-0">
+                                <div class="card-header text-left border-0">Report delivered</div>
+                            </div>
+                        </td>
+                        <td class="py-2">
+                            <div class="card dashboard-card mb-sm-4 pb-5 shadow border-0">
+                                <div class="card-header text-left border-0">Report delivery pending</div>
+                            </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="py-2">
+                            <div class="card dashboard-card mb-sm-4 pb-5 shadow border-0">
+                                <div class="card-header text-left border-0">Distance covered</div>
+                            </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col minor-heading ml-5">
+                My total
+            </div>
+        </div>
+        <div class="row mt-4 ml-5">
+            <div class="col-sm-4">
+                <div class="card mytotal-card mb-sm-3 pb-5 shadow border-0">
+                    <div class="card-header text-left border-0">Floating Cash</div>
+                </div>
+            </div>
+            <div class="col-sm-4 ml-n4">
+                <div class="card mytotal-card mb-sm-3 pb-5 shadow border-0">
+                    <div class="card-header text-left border-0">Cash collected</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col minor-heading ml-5">
+                Cash
+            </div>
+        </div>
+        <div class="row mt-4">
+                <div class="col ml-5">
+                    <div class="card cash-card mb-sm-3 shadow border-0">
+                        <div class="card-header text-left border-0">Floating Cash</div>
+                        <div class="card-footer text-right border-0">
+                            <svg aria-hidden="true" height="0.5em" width="0.5em" focusable="false" data-prefix="fas" data-icon="rupee-sign" class="svg-inline--fa fa-rupee-sign fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M308 96c6.627 0 12-5.373 12-12V44c0-6.627-5.373-12-12-12H12C5.373 32 0 37.373 0 44v44.748c0 6.627 5.373 12 12 12h85.28c27.308 0 48.261 9.958 60.97 27.252H12c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h158.757c-6.217 36.086-32.961 58.632-74.757 58.632H12c-6.627 0-12 5.373-12 12v53.012c0 3.349 1.4 6.546 3.861 8.818l165.052 152.356a12.001 12.001 0 0 0 8.139 3.182h82.562c10.924 0 16.166-13.408 8.139-20.818L116.871 319.906c76.499-2.34 131.144-53.395 138.318-127.906H308c6.627 0 12-5.373 12-12v-40c0-6.627-5.373-12-12-12h-58.69c-3.486-11.541-8.28-22.246-14.252-32H308z"></path></svg>
+                            1000
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card cash-card mb-sm-3 shadow border-0">
+                        <div class="card-header text-left border-0">Cash collected</div>
+                        <div class="card-footer text-right border-0">
+                            <svg aria-hidden="true" height="0.5em" width="0.5em" focusable="false" data-prefix="fas" data-icon="rupee-sign" class="svg-inline--fa fa-rupee-sign fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M308 96c6.627 0 12-5.373 12-12V44c0-6.627-5.373-12-12-12H12C5.373 32 0 37.373 0 44v44.748c0 6.627 5.373 12 12 12h85.28c27.308 0 48.261 9.958 60.97 27.252H12c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h158.757c-6.217 36.086-32.961 58.632-74.757 58.632H12c-6.627 0-12 5.373-12 12v53.012c0 3.349 1.4 6.546 3.861 8.818l165.052 152.356a12.001 12.001 0 0 0 8.139 3.182h82.562c10.924 0 16.166-13.408 8.139-20.818L116.871 319.906c76.499-2.34 131.144-53.395 138.318-127.906H308c6.627 0 12-5.373 12-12v-40c0-6.627-5.373-12-12-12h-58.69c-3.486-11.541-8.28-22.246-14.252-32H308z"></path></svg>
+                            1000
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card cash-card mb-sm-3 shadow border-0">
+                        <div class="card-header text-left border-0">Cash to lab</div>
+                        <div class="card-footer text-right border-0">
+                            <svg aria-hidden="true" height="0.5em" width="0.5em" focusable="false" data-prefix="fas" data-icon="rupee-sign" class="svg-inline--fa fa-rupee-sign fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M308 96c6.627 0 12-5.373 12-12V44c0-6.627-5.373-12-12-12H12C5.373 32 0 37.373 0 44v44.748c0 6.627 5.373 12 12 12h85.28c27.308 0 48.261 9.958 60.97 27.252H12c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h158.757c-6.217 36.086-32.961 58.632-74.757 58.632H12c-6.627 0-12 5.373-12 12v53.012c0 3.349 1.4 6.546 3.861 8.818l165.052 152.356a12.001 12.001 0 0 0 8.139 3.182h82.562c10.924 0 16.166-13.408 8.139-20.818L116.871 319.906c76.499-2.34 131.144-53.395 138.318-127.906H308c6.627 0 12-5.373 12-12v-40c0-6.627-5.373-12-12-12h-58.69c-3.486-11.541-8.28-22.246-14.252-32H308z"></path></svg>
+                            1000
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card cash-card mb-sm-3 shadow border-0">
+                        <div class="card-header text-left border-0">Cash to office</div>
+                        <div class="card-footer text-right border-0">
+                            <svg aria-hidden="true" height="0.5em" width="0.5em" focusable="false" data-prefix="fas" data-icon="rupee-sign" class="svg-inline--fa fa-rupee-sign fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M308 96c6.627 0 12-5.373 12-12V44c0-6.627-5.373-12-12-12H12C5.373 32 0 37.373 0 44v44.748c0 6.627 5.373 12 12 12h85.28c27.308 0 48.261 9.958 60.97 27.252H12c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h158.757c-6.217 36.086-32.961 58.632-74.757 58.632H12c-6.627 0-12 5.373-12 12v53.012c0 3.349 1.4 6.546 3.861 8.818l165.052 152.356a12.001 12.001 0 0 0 8.139 3.182h82.562c10.924 0 16.166-13.408 8.139-20.818L116.871 319.906c76.499-2.34 131.144-53.395 138.318-127.906H308c6.627 0 12-5.373 12-12v-40c0-6.627-5.373-12-12-12h-58.69c-3.486-11.541-8.28-22.246-14.252-32H308z"></path></svg>
+                            1000
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
