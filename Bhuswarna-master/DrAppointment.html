@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Appointment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      .form-control{
+        border-radius: 100px;
+      }
+      .has-PIN .form-control {
+          padding-left: 2.375rem;
+          border-radius: 50px;
+          border-color: #141B41;
+      }
+
+      .has-PIN .form-control-feedback {
+          position: absolute;
+          z-index: 2;
+          display: block;
+          width: 2.375rem;
+          height: 2.375rem;
+          line-height: 2.375rem;
+          text-align: center;
+          pointer-events: none;
+          color: #141B41;
+      }
+      .has-search .form-control {
+          border-radius: 50px;
+          border-color: #141B41;
+      }
+
+      .has-search .form-control-feedback {
+          position: absolute;
+          display: inline-block;
+          width: 2.375rem;
+          height: 2.375rem;
+          line-height: 2.375rem;
+          text-align: center;
+          color: #141B41;
+          margin-left: 400px;
+      }
+      .bordr{
+          border-color: #141B41;
+      }
+      .input-group-text{
+             background-color: #fff;
+             border-radius: 1000px;
+             border-color: #141B41;
+      }
+      .container-border{
+        border-radius: 10px;
+        border: 2px solid #0076FF;
+      }
+      .circle1{
+        width: 169px;
+        height: 169px;
+        background-color: #c4c4c4;
+      }
+      .wt-and-size{
+          font-size: 24px;
+          font-weight: 600;
+      }
+      .available-today{
+          color: #0076FF;
+          font-size: 26px;
+      }
+      .view-profile{
+        background-color: #fff;
+        border: 1px solid #808080;
+        box-sizing: border-box;
+        border-radius: 10000px;
+        color: #0076FF;
+      }
+      .view-profile:hover{
+          background-color: #fff;
+          border: 1px solid #808080;
+          color: #0076FF;
+      }
+      .tele-consultation-btn{
+        background-color: #141B41;
+        border-radius: 10000px;
+        color: #FFFFFF;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .book-appointment{
+        background: #FF8900;
+        border-radius: 10000px;
+      }
+      .book-appointment:hover{
+          background-color: #FF8900;
+      }
+      .small-btntext{
+        font-size: 10px;
+      }
+      .days{
+        background: #FFFFFF;
+        border: 2px solid #0076FF;
+        border-radius: 5px;
+        color: #0076FF;
+        font-weight: 600;
+        margin-right: 15px;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+      .days:hover{
+        color: #0076FF;
+      }
+      .wednesday{
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .friday{
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+      .timing{
+        font-size: 9px;
+      }
+      .small-table{
+        border-collapse: separate;
+        border-spacing: 3px 0 ;
+      }
+      .slot-time{
+        border-collapse: separate;
+        border-spacing: 12px 0 ;
+      }
+      .btn-time{
+        border-radius: 5px;
+      }
+      @media only screen and (max-width: 768px) {
+               /* For mobile phones: */
+                  .upper-searches {
+                  margin-top: 15px;
+                  }
+               }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+          <div class="col-12 col-lg-2">
+            <div class="form-group has-PIN">
+              <span class="material-icons form-control-feedback">room</span>
+              <input type="text" class="form-control" placeholder="Enter PIN Code">
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 ml-md-3">
+            <div class="input-group md-form form-sm form-2">
+              <input class="form-control my-0 bordr" type="text" placeholder="Search for doctors, speciality, hospitals, clinic  etc" aria-label="Search">
+              <div class="input-group-append">
+                <div class="input-group-text" id="basic-text1"><i class="fa fa-search text-grey"
+                 aria-hidden="true"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-2 ml-md-3 upper-searches">
+            <form class="form-horizontal">
+                <select class="form-control bordr">
+                  <option selected>Speciality</option>
+                  <option>...</option>
+                </select>
+            </form>
+          </div>
+          <div class="col-12 col-lg-2 ml-md-3 upper-searches">
+            <form class="form-horizontal">
+              <select class="form-control bordr">
+                <option selected>Hospital/Clinic</option>
+                <option>...</option>
+              </select>
+          </form>
+          </div>
+        </div>
+    </div>
+    <div class="container container-border mt-5 pb-4">
+        <div class="row mt-5">
+            <div class="col-12 col-lg-2">
+                <div class="circle1 rounded-circle"></div>
+            </div>
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <p class="wt-and-size">Dr. Radhaswami Iyer</p>
+                        <p class="text-muted">Speciality</p>
+                        <p class="text-muted">12 years experience</p>
+                        <p><l class="text-muted">Clinic / Hospital / Pharmacy Name </l><b>+ 1 address</b></p>
+                        <p class="text-muted">Full address of the locations</p>
+                        <p><b>Consultation Fees  Rs 300</b></p>
+                    </div>
+                    <div class="col-12 col-md-3 ml-auto mr-4">
+                        <p class="available-today"><b>Available Today</b></p>
+                        <p class="text-center">
+                            <a href="#"><button class="btn btn-sm view-profile px-5 py-2">View Profile</button></a>
+                        </p>
+                        <p class="text-center">
+                          <a href="#"><button type="button" class="btn btn-sm text-white py-1 tele-consultation-btn">
+                            Tele-consultation
+                            <div class="small-btntext text-muted">For Rs 200</div></button></a>
+                        </p>
+                        <p class="text-center">
+                            <a href="#"><button class="btn btn-sm book-appointment px-4 py-2">Book Appointment</button></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-5 ml-n3">
+                  <div class="col-sm-12">
+                    <p class="wt-and-size">Available on</p>
+                    <div class="w-100"></div>
+                    <table class="table-responsive">
+                      <tr>
+                        <td>
+                          <a href="#"><button class="btn btn-sm days">
+                            Monday
+                            <div class="text-muted small-btntext">March 02</div>
+                          </button></a>
+                          <table class="text-muted small-table mt-2">
+                            <tr>
+                              <td class="timing">Morning</td>
+                              <td class="timing">11am - 1:30pm</td>
+                            </tr>
+                            <tr>
+                              <td class="timing">Evening</td>
+                              <td class="timing">6:30pm - 9pm</td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm days">
+                            Tuesday
+                            <div class="text-muted small-btntext">March 03</div>
+                          </button></a>
+                          <table class="text-muted small-table mt-2">
+                            <tr>
+                              <td class="timing">Morning</td>
+                              <td class="timing">11am - 1:30pm</td>
+                            </tr>
+                            <tr>
+                              <td class="timing">Evening</td>
+                              <td class="timing">6:30pm - 9pm</td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm days wednesday">
+                            Wednesday
+                            <div class="text-muted small-btntext">March 04</div>
+                          </button></a>
+                          <table class="text-muted small-table mt-2">
+                            <tr>
+                              <td class="timing">Morning</td>
+                              <td class="timing">11am - 1:30pm</td>
+                            </tr>
+                            <tr>
+                              <td class="timing">Evening</td>
+                              <td class="timing">6:30pm - 9pm</td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm days">
+                            Thursday
+                            <div class="text-muted small-btntext">March 05</div>
+                          </button></a>
+                          <table class="text-muted small-table mt-2">
+                            <tr>
+                              <td class="timing">Morning</td>
+                              <td class="timing">11am - 1:30pm</td>
+                            </tr>
+                            <tr>
+                              <td class="timing">Evening</td>
+                              <td class="timing">6:30pm - 9pm</td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm days friday">&nbsp;Friday&nbsp;
+                            <div class="text-muted small-btntext">March 06</div>
+                          </button></a>
+                          <table class="text-muted small-table mt-2">
+                            <tr>
+                              <td class="timing">Morning</td>
+                              <td class="timing">11am - 1:30pm</td>
+                            </tr>
+                            <tr>
+                              <td class="timing">Evening</td>
+                              <td class="timing">6:30pm - 9pm</td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm days">
+                            Saturday
+                            <div class="text-muted small-btntext">March 07</div>
+                          </button></a>
+                          <table class="text-muted small-table mt-2">
+                            <tr>
+                              <td class="timing">Morning</td>
+                              <td class="timing">11am - 1:30pm</td>
+                            </tr>
+                            <tr>
+                              <td class="timing">Evening</td>
+                              <td class="timing">6:30pm - 9pm</td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm days friday">
+                            Sunday
+                            <div class="text-muted small-btntext">March 08</div>
+                          </button></a>
+                          <table class="text-muted small-table mt-2">
+                            <tr>
+                              <td class="timing">Morning</td>
+                              <td class="timing">11am - 1:30pm</td>
+                            </tr>
+                            <tr>
+                              <td class="timing">Evening</td>
+                              <td class="timing">6:30pm - 9pm</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="row mt-5">
+                  <div class="col-sm-12">
+                    <p class="wt-and-size">Slot Available</p>
+                    <p class="text-muted mt-n3">Morning</p>
+                    <table class="slot-time mt-n2 ml-n3 table-responsive">
+                      <tr>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">11:00 am</button></a>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">11:15 am</button></a>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">11:30 am</button></a>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">11:45 am</button></a>
+                        </td>
+                      </tr>
+                    </table>
+                    <p class="text-muted mt-4">Noon</p>
+                    <table class="slot-time mt-n2 ml-n3 table-responsive">
+                      <tr>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">12:00 pm</button></a>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">12:15 pm</button></a>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">12:30 pm</button></a>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">12:45 pm</button></a>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">1:00 pm</button></a>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">1:15 pm</button></a>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">1:30 pm</button></a>
+                        </td>
+                      </tr>
+                    </table>
+                    <p class="text-muted mt-4">Evening</p>
+                    <table class="slot-time mt-n2 ml-n3 table-responsive">
+                      <tr>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">3:30 pm</button></a>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">3:45 pm</button></a>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">4:00 pm</button></a>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">4:15 pm</button></a>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">4:30 pm</button></a>
+                        </td>
+                      </tr>
+                    </table>
+                    <p class="text-muted mt-4">Night</p>
+                    <table class="slot-time mt-n2 ml-n3 table-responsive">
+                      <tr>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">8:15 pm</button></a>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">8:30 pm</button></a>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">8:45 pm</button></a>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">9:00 pm</button></a>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">9:15 pm</button></a>
+                        </td>
+                        <td>
+                          <a href="#"><button class="btn btn-sm border border-rounded btn-time text-muted">9:30 pm</button></a>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container container-border mt-5 mb-5 pb-4">
+      <div class="row mt-5">
+          <div class="col-12 col-lg-2">
+              <div class="circle1 rounded-circle"></div>
+          </div>
+          <div class="col-sm-10">
+              <div class="row">
+                  <div class="col-sm-7">
+                      <p class="wt-and-size">Dr. Radhaswami Iyer</p>
+                      <p class="text-muted">Speciality</p>
+                      <p class="text-muted">12 years experience</p>
+                      <p><l class="text-muted">Clinic / Hospital / Pharmacy Name </l><b>+ 1 address</b></p>
+                      <p class="text-muted">Full address of the locations</p>
+                      <p><b>Consultation Fees  Rs 300</b></p>
+                  </div>
+                  <div class="col-12 col-md-3 ml-auto mr-4">
+                      <p class="available-today"><b>Available Today</b></p>
+                      <p class="text-center">
+                          <a href="#"><button class="btn btn-sm view-profile px-5 py-2">View Profile</button></a>
+                      </p>
+                      <p class="text-center">
+                        <a href="#"><button type="button" class="btn btn-sm text-white py-1 tele-consultation-btn">
+                          Tele-consultation
+                          <div class="small-btntext text-muted">For Rs 200</div></button></a>
+                      </p>
+                      <p class="text-center">
+                          <a href="#"><button class="btn btn-sm book-appointment px-4 py-2">Book Appointment</button></a>
+                      </p>
+                  </div>
+              </div>
+              <div class="row mt-5 ml-n3">
+                <div class="col-sm-12">
+                  <p class="wt-and-size">Available on</p>
+                  <div class="w-100"></div>
+                  <table class="table-responsive">
+                    <tr>
+                      <td>
+                        <a href="#"><button class="btn btn-sm days">
+                          Monday
+                          <div class="text-muted small-btntext">March 02</div>
+                        </button></a>
+                        <table class="text-muted small-table mt-2">
+                          <tr>
+                            <td class="timing">Morning</td>
+                            <td class="timing">11am - 1:30pm</td>
+                          </tr>
+                          <tr>
+                            <td class="timing">Evening</td>
+                            <td class="timing">6:30pm - 9pm</td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td>
+                        <a href="#"><button class="btn btn-sm days">
+                          Tuesday
+                          <div class="text-muted small-btntext">March 03</div>
+                        </button></a>
+                        <table class="text-muted small-table mt-2">
+                          <tr>
+                            <td class="timing">Morning</td>
+                            <td class="timing">11am - 1:30pm</td>
+                          </tr>
+                          <tr>
+                            <td class="timing">Evening</td>
+                            <td class="timing">6:30pm - 9pm</td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td>
+                        <a href="#"><button class="btn btn-sm days wednesday">
+                          Wednesday
+                          <div class="text-muted small-btntext">March 04</div>
+                        </button></a>
+                        <table class="text-muted small-table mt-2">
+                          <tr>
+                            <td class="timing">Morning</td>
+                            <td class="timing">11am - 1:30pm</td>
+                          </tr>
+                          <tr>
+                            <td class="timing">Evening</td>
+                            <td class="timing">6:30pm - 9pm</td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td>
+                        <a href="#"><button class="btn btn-sm days">
+                          Thursday
+                          <div class="text-muted small-btntext">March 05</div>
+                        </button></a>
+                        <table class="text-muted small-table mt-2">
+                          <tr>
+                            <td class="timing">Morning</td>
+                            <td class="timing">11am - 1:30pm</td>
+                          </tr>
+                          <tr>
+                            <td class="timing">Evening</td>
+                            <td class="timing">6:30pm - 9pm</td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td>
+                        <a href="#"><button class="btn btn-sm days friday">
+                          &nbsp;Friday&nbsp;
+                          <div class="text-muted small-btntext">March 06</div>
+                        </button></a>
+                        <table class="text-muted small-table mt-2">
+                          <tr>
+                            <td class="timing">Morning</td>
+                            <td class="timing">11am - 1:30pm</td>
+                          </tr>
+                          <tr>
+                            <td class="timing">Evening</td>
+                            <td class="timing">6:30pm - 9pm</td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td>
+                        <a href="#"><button class="btn btn-sm days">
+                          Saturday
+                          <div class="text-muted small-btntext">March 07</div>
+                        </button></a>
+                        <table class="text-muted small-table mt-2">
+                          <tr>
+                            <td class="timing">Morning</td>
+                            <td class="timing">11am - 1:30pm</td>
+                          </tr>
+                          <tr>
+                            <td class="timing">Evening</td>
+                            <td class="timing">6:30pm - 9pm</td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td>
+                        <a href="#"><button class="btn btn-sm days friday">
+                          Sunday
+                          <div class="text-muted small-btntext">March 08</div>
+                        </button></a>
+                        <table class="text-muted small-table mt-2">
+                          <tr>
+                            <td class="timing">Morning</td>
+                            <td class="timing">11am - 1:30pm</td>
+                          </tr>
+                          <tr>
+                            <td class="timing">Evening</td>
+                            <td class="timing">6:30pm - 9pm</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+</html>
