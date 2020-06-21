@@ -4,41 +4,78 @@
         <title>
             Payment
         </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+         
+         <style>
+             body{
+                 background-color: aliceblue;
+             }
+             .payment{
+                background-color: #fff; 
+                border-radius: 10px;
+             }
+             hr{
+                height:0.5px;
+                border-width:0;
+                background-color:#EBEBEB;
+             }
+             .pad{
+                 padding-bottom: 90px;      /*for padding bottom in the left side payment column*/
+             }
+             .rectangle{
+                width: 195px; 
+                height: 23px;
+                background: #F1F7FF; 
+                border-radius: 5px;
+             }
+             .right-blue{
+                background-color:aliceblue;
+             }
+             .right-side{
+                background-color: #fff; 
+                border-radius: 10px;
+             }
+         </style>
     </head>
-    <body style="background-color: aliceblue;">
+    <body>
         <div class="container my-5">
+
+            <!------------------------------------------------------------------------>
             <div class="row">
-                <div class="col-8 py-4 pb-5 pl-4 mt-3" style="background-color: white; border-radius: 10px;">
+                <div class="col-12 col-lg-8 py-4 pb-5 pl-4 mt-3 payment">
                     <h3>Payment</h3>
-                    <hr style="height:0.5px;border-width:0;background-color:#EBEBEB">
+                    <hr>
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-12 col-lg-4">
                              Choose a payment option
                          </div>
                     </div>
+
                     <form>
                         <div class="form-group">
                             <div class="row">
-                                <div class="col-4 mr-auto mt-5">
+                                <div class="col-7 col-lg-4 mr-auto mt-5">
                                     <div class="custom-control custom-radio">
                                          <input type="radio" class="custom-control-input" id="customRadio1" name="payment">
                                          <label class="custom-control-label" for="customRadio1">Cash on Delivery(COD)</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-2 ml-auto mt-5">
-                                <a href="#">
-                                    <button class="btn btn-primary btn-sm px-4">Done</button>
-                                </a>
-                            </div>  
+                                <div class="mr-4 ml-auto mt-5">
+                                    <a href="#">
+                                        <button class="btn btn-primary btn-sm px-4">Done</button>
+                                    </a>
+                                </div>  
                             </div>    
+
                             <div class="row">
                                 <div class="col-12">
-                                    <hr style="height:0.5px;border-width:0;background-color:#EBEBEB">
+                                    <hr>
                                 </div>
                             </div> 
                             <div class="row">
@@ -60,13 +97,14 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="row">
                                 <div class="col-12">
-                                    <hr style="height:0.5px;border-width:0;background-color:#EBEBEB">
+                                    <hr>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-8 mt-5">
+                                <div class="col-12 mt-5">
                                     <div class="custom-control custom-radio">
                                         <input type="radio" class="custom-control-input" id="customRadio3" name="payment">
                                         <label class="custom-control-label" for="customRadio3">Credit Card</label>
@@ -80,20 +118,21 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-12">
-                                    <hr style="height:0.5px;border-width:0;background-color:#EBEBEB">
+                                <div class="col-12 pad">
+                                    <hr>
                                 </div>
                             </div>
                         </div>
                     </form>
-                    <br><br><br><br><br><br>
                 </div>
-                <div class="col-3 offset-md-1 mt-3" style="background-color:aliceblue">
-                    <div class="row py-4 px-4 pb-5" style="background-color: white; border-radius: 10px;">
+
+                <!------------------------------------------------------------------------>
+                <div class="col-12 col-lg-3 offset-md-1 mt-lg-3 mt-4 right-blue">
+                    <div class="row py-4 px-4 pb-5 right-side">
                         <div class="col-12">
                             <h6>Laboratory</h6>
                             <div class="row">
-                                <div class="col-9 ml-3 rectangle" style="width: 195px; height: 23px;background: #F1F7FF; border-radius: 5px;"></div>
+                                <div class="col-9 ml-3 rectangle"></div>
                             </div>
                             <br>
                             <div class="row">
@@ -107,73 +146,53 @@
                                 <div class="col-6">
                                     Time <input type="time" class="btn btn-sm">
                                 </div>
-                                <div class="col-12">
+                                <div class="col-12 mt-3">
                                     <h4>Billing Info</h4>
-                                    <hr style="height:0.5px;border-width:0;background-color:#EBEBEB">
+                                    <hr>
                                 </div>
-                            </div>
-                            <div class="row pr-5">
-                                <div class="col-9">
-                                    Test 1 Price
-                                </div>
-                                <div class="col-2 mr-auto">
-                                    350.00
-                                </div>
-                                <div class="w-100"></div>
-                                <div class="col-9">
-                                    Test 2 Price
-                                </div>
-                                <div class="col-2 mr-auto">
-                                    450.00
-                                </div>
-                                <div class="w-100"></div>
-                                <div class="col-9">
-                                    Package Price
-                                </div>
-                                <div class="col-2 mr-auto">
-                                    400.00
-                                </div>
-                                <div class="w-100"></div>
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <hr style="height:0.5px;border-width:0;background-color:#EBEBEB">
-                                </div>
-                            </div>
-                            <div class="row pr-5">
-                                <div class="col-9">
-                                    Total Price
-                                </div>
-                                <div class="col-2 mr-auto">
-                                    1200.00
-                                </div>
-                                <div class="w-100"></div>
-                                <div class="col-9">
-                                    Delivery charge
-                                </div>
-                                <div class="col-2 mr-auto">
-                                    20.00
-                                </div>
-                                <div class="w-100"></div>
-                                <div class="col-9">
-                                    Membership discount
-                                </div>
-                                <div class="col-2 mr-auto">
-                                    -50.00
-                                </div>
-                                <div class="w-100"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <hr style="height:0.5px;border-width:0;background-color:#EBEBEB">
-                                </div>
-                            </div>
-                            <div class="row pr-5">
-                                <div class="col-9">
-                                    Total amount
-                                </div>
-                                <div class="col-2 mr-auto">
-                                    1170.00
+                                    <table class="table table-borderless table-sm">
+                                        <tbody>
+                                            <tr>
+                                                <td>Test 1 Price</td>
+                                                <td>350.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="mt-n2">Test 2 Price</div></td>
+                                                <td><div class="mt-n2">450.00</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="mt-n2">Package Price</div></td>
+                                                <td><div class="mt-n2">400.00</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="mt-n2"><hr></div></td>
+                                                <td><div class="mt-n2"><hr class="ml-n3"></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="mt-n2">Total Price</div></td>
+                                                <td><div class="mt-n2">1200.00</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="mt-n2">Delivery charge</div></td>
+                                                <td><div class="mt-n2">20.00</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="mt-n2">Membership discount</div></td>
+                                                <td><div class="mt-n2">-50.00</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="mt-n2"><hr></div></td>
+                                                <td><div class="mt-n2"><hr class="ml-n3"></div></td>
+                                            </tr>
+                                            <tr>
+                                                <td><div class="mt-n2">Total amount</div></td>
+                                                <td><div class="mt-n2">1170.00</div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
