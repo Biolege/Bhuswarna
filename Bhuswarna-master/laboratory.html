@@ -4,7 +4,6 @@
     <title>Biolege</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -14,27 +13,43 @@
             align-items: center;
             color: #141B41;
         }
-    </style>>
+        hr{
+            height:0.5px;
+            border-width:0;
+            background-color:#EBEBEB;
+        }
+        .card{
+            width: 18rem;
+        }
+        .next{
+            background-color: #141B41;
+        }
+        .btn{
+            color: #fff;
+        }
+        .btn:hover{
+            color: #fff;
+        }
+    </style>
   </head>
 <body>
     <div class="container my-5 shadow p-3 mb-5 bg-white rounded">
         <div class="row mt-2 mb-n3">
-            <div class="col"><h3>Select Laboratory</h3></div>
+            <div class="col text-center text-lg-left"><h3>Select Laboratory</h3></div>
         </div>
-        <hr style="height:0.5px;border-width:0;background-color:#EBEBEB">
+        <hr>
         <div class="row my-5">
-            <div class="col col-2">
-                <div class="card text-center" style="width: 18rem;">
+            <div class="col col-lg-2 offset-1 offset-sm-2 offset-lg-0">
+                <div class="card text-center">
                     <img class="card-img-top" src="..." alt="Card image cap">
                     <div class="card-body">
                       <h6 class="card-title">Laboratory Name</h6>
                       <p class="card-text">Price</p>
-                    
                     </div>
                 </div>
             </div>
-            <div class="col col-2 offset-2">
-                <div class="card text-center" style="width: 18rem;">
+            <div class="col col-lg-2 offset-sm-2 mt-4 mt-lg-0 offset-1">
+                <div class="card text-center">
                     <img class="card-img-top" src="..." alt="Card image cap">
                     <div class="card-body">
                       <h6 class="card-title">Laboratory Name</h6>
@@ -45,11 +60,10 @@
         </div>
         <br><br><br>
         <div class="row">
-            <div class="col-1 text-center ml-auto mr-3 mt-5 justify-content-end rounded-pill " style="background-color: #141B41;">
-                <div type="button" class="btn btn-dark btn-sm justify-content-end border-0" style="background-color: #141B41;" >Next</div>
+            <div class="col-3 col-sm-2 col-lg-1 text-center ml-auto mr-3 mt-5 justify-content-end rounded-pill next">
+                <div type="button" class="btn btn-sm justify-content-end border-0" >Next</div>
             </div>
         </div>
     </div>
 </body>
-    
 </html>
