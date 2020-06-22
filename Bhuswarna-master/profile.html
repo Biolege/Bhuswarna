@@ -46,17 +46,29 @@
         .cash-card{
             width: 15rem;
         }
+        @media only screen and (max-width: 768px){
+            [class*="circle1"] {
+                margin-left: 75px;
+            }
+        }
+        @media (min-width: 600px) and (max-width: 992px){
+            [class*="circle1"] {
+                margin-left: 145px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container shadow mt-5">
+    <div class="container shadow mt-5 mb-lg-5 ">
         <div class="row">
-            <div class="col-sm-12 mt-4 ml-5 my-details">
+            <div class="col-sm-12 mt-4 ml-lg-5 my-details text-center text-lg-left">
                 <b>My details</b>
             </div>
         </div>
+
+        <!------------------------------------------------------------------------------------------->
         <div class="row">
-            <div class="col-sm-7 mt-4 ml-5">
+            <div class="col-sm-7 mt-4 ml-lg-5">
                 <table class="table table-borderless">
                     <tbody>
                       <tr>
@@ -102,17 +114,18 @@
                     </tbody>
                   </table>
             </div>
-            <div class="col-sm-4 mt-5 ml-auto">
+            <div class="col-12 ml-md-n5 col-lg-4 mt-5 ml-lg-auto mx-auto">
                 <div class="circle1 rounded-circle"></div>
             </div>
         </div>
+        <!------------------------------------------------------------------------------------------->
         <div class="row minor-heading">
-            <div class="col text-muted ml-5 mt-3">
+            <div class="col text-muted ml-lg-5 text-center text-lg-left mt-3">
                 Documents
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4 ml-5 mt-4">
+            <div class="col-8 col-lg-4 ml-lg-5 mt-4 mx-auto">
                 <table class="table table-borderless">
                     <tbody>
                       <tr>
@@ -149,83 +162,76 @@
                 </table>
             </div>
         </div>
+        <!------------------------------------------------------------------------------------------->
         <div class="row minor-heading">
-            <div class="col-sm-2 ml-5">
+            <div class="col-12 col-sm-3 col-lg-2 ml-lg-5 ml-sm-3 text-center text-sm-left">
                 Dashboard
             </div>
-            <div class="col-sm-3 mr-n2 ml-auto">
+            <div class="col-12 col-sm-5 col-lg-3 mr-sm-n2 mr-lg-n5 mt-2 mt-sm-0 ml-auto text-center text-md-left">
                 April 24, 2020
                  <svg aria-hidden="true" focusable="false" data-prefix="far" width="1em" height="1em" data-icon="calendar-alt" class="svg-inline--fa fa-calendar-alt fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path></svg>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-11 ml-5 mt-4">
-                <table class="table table-borderless">
-                    <tbody>
-                      <tr>
-                        <td class="py-2">
-                            <div class="card dashboard-card mb-sm-4 pb-5 shadow border-0">
-                                <div class="card-header text-left border-0">Today’s orders</di>
-                            </div>
-                        </td>
-                        <td class="py-2">
-                            <div class="card dashboard-card mb-sm-4 pb-5 shadow border-0">
-                                <div class="card-header text-left border-0">Sample collected</div>
-                            </div>
-                        </td>
-                        <td class="py-2">
-                            <div class="card dashboard-card mb-sm-4 pb-5 shadow border-0">
-                                <div class="card-header text-left border-0">Sample collection pending</div>
-                            </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="py-2">
-                            <div class="card dashboard-card mb-sm-4 pb-5 shadow border-0">
-                                <div class="card-header text-left border-0">Report delivered</div>
-                            </div>
-                        </td>
-                        <td class="py-2">
-                            <div class="card dashboard-card mb-sm-4 pb-5 shadow border-0">
-                                <div class="card-header text-left border-0">Report delivery pending</div>
-                            </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="py-2">
-                            <div class="card dashboard-card mb-sm-4 pb-5 shadow border-0">
-                                <div class="card-header text-left border-0">Distance covered</div>
-                            </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                </table>
+        <div class="row mt-4 ml-lg-5 ml-4">
+            <div class="col-12 col-lg-4 ml-n3 d-flex justify-content-center">
+                <div class="card dashboard-card mb-sm-4 pb-5 shadow border-0">
+                    <div class="card-header text-left border-0">Today’s orders</div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 ml-lg-n4 mt-4 mt-lg-0 ml-n3 d-flex justify-content-center">
+                <div class="card dashboard-card mb-sm-4 pb-5 shadow border-0">
+                    <div class="card-header text-left border-0">Sample collected</div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 ml-lg-n4 mt-4 mt-lg-0 ml-n3 d-flex justify-content-center">
+                <div class="card dashboard-card mb-sm-4 pb-5 shadow border-0">
+                    <div class="card-header text-left border-0">Sample collection pending</div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 ml-lg-n3 mt-4 mt-lg-0 ml-n3 d-flex justify-content-center">
+                <div class="card dashboard-card mb-sm-4 pb-5 shadow border-0">
+                    <div class="card-header text-left border-0">Report delivered</div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 ml-lg-n4 mt-4 mt-lg-0 ml-n3 d-flex justify-content-center">
+                <div class="card dashboard-card mb-sm-4 pb-5 shadow border-0">
+                    <div class="card-header text-left border-0">Report delivery pending</div>
+                </div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-12 col-lg-4 ml-lg-n3 mt-4 mt-lg-0 ml-n3 d-flex justify-content-center">
+                <div class="card dashboard-card mb-sm-4 pb-5 shadow border-0">
+                    <div class="card-header text-left border-0">Distance covered</div>
+                </div>
             </div>
         </div>
+
+        <!------------------------------------------------------------------------------------------->
         <div class="row">
-            <div class="col minor-heading ml-5">
+            <div class="col minor-heading ml-sm-5 text-center text-lg-left mt-4">
                 My total
             </div>
         </div>
-        <div class="row mt-4 ml-5">
-            <div class="col-sm-4">
+        <div class="row mt-4 ml-lg-5 ml-4">
+            <div class="col-12 col-lg-4 ml-n3 d-flex justify-content-center">
                 <div class="card mytotal-card mb-sm-3 pb-5 shadow border-0">
                     <div class="card-header text-left border-0">Floating Cash</div>
                 </div>
             </div>
-            <div class="col-sm-4 ml-n4">
+            <div class="col-12 col-lg-4 ml-lg-n4 mt-4 mt-lg-0 ml-n3 d-flex justify-content-center">
                 <div class="card mytotal-card mb-sm-3 pb-5 shadow border-0">
                     <div class="card-header text-left border-0">Cash collected</div>
                 </div>
             </div>
         </div>
+        <!------------------------------------------------------------------------------------------->
         <div class="row">
-            <div class="col minor-heading ml-5">
+            <div class="col minor-heading ml-sm-5 text-center text-lg-left mt-4">
                 Cash
             </div>
         </div>
-        <div class="row mt-4">
-                <div class="col ml-5">
+        <div class="row mt-4 pb-5">
+                <div class="col ml-lg-5 d-flex justify-content-center">
                     <div class="card cash-card mb-sm-3 shadow border-0">
                         <div class="card-header text-left border-0">Floating Cash</div>
                         <div class="card-footer text-right border-0">
@@ -234,7 +240,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col mt-4 mt-sm-0 mt-lg-0 d-flex justify-content-center">
                     <div class="card cash-card mb-sm-3 shadow border-0">
                         <div class="card-header text-left border-0">Cash collected</div>
                         <div class="card-footer text-right border-0">
@@ -243,7 +249,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col mt-4 mt-lg-0 d-flex justify-content-center">
                     <div class="card cash-card mb-sm-3 shadow border-0">
                         <div class="card-header text-left border-0">Cash to lab</div>
                         <div class="card-footer text-right border-0">
@@ -252,7 +258,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col mt-4 mt-lg-0 d-flex justify-content-center">
                     <div class="card cash-card mb-sm-3 shadow border-0">
                         <div class="card-header text-left border-0">Cash to office</div>
                         <div class="card-footer text-right border-0">
