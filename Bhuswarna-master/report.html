@@ -45,20 +45,34 @@
             width: 45px; 
             height: 45px;
        }
+       @media only screen and (max-width: 768px)
+       {
+         .report-delivery-pend{
+           margin-left: 110px;
+         }
+       }
+       @media (min-width: 768px) and (max-width: 1100px)
+       {
+         .report-delivery-pend{
+           margin-left: 13.5%;
+         }
+       }
      </style>
 </head>
 <body>
     <div class="container-fluid head-links mt-sm-4">
         <div class="row">
-            <div class="col-sm-5 py-sm-2 report-delivery-pend"><a class="darkbg" href=#>Report delivery pending</a></div>
+            <div class="col py-sm-2 report-delivery-pend"><a class="darkbg" href=#>Report delivery pending</a></div>
         </div>
     </div>
+
+    <!---------------------------------------------------------------------------->
     <div class="container">
         <div class="row mt-5">
-            <div class="col-sm-4 reports">
+            <div class="col-sm-4 reports text-center text-sm-left">
                 Reports
             </div>
-            <div class="col-sm-3 ml-auto">
+            <div class="col-12 col-sm-4 col-md-3 ml-auto mt-4 mt-sm-0">
                <div class="input-group md-form form-sm form-2">
                   <input class="form-control my-0 border" type="text" placeholder="Search" aria-label="Search">
                   <div class="input-group-append">
@@ -67,13 +81,15 @@
                   </div>
                 </div>
             </div>
+            
             <div class="w-100"></div>
             <div class="col-sm-5 mt-4">
                 Today, 25-01-2020
             </div>
         </div>
         <div class="row mt-4">
-            <table class="table text-center">
+          <div class="col-12">
+            <table class="table text-center table-responsive-md">
                 <tbody>
                   <tr class="shadow">
                     <th scope="row"></th>
@@ -104,12 +120,15 @@
                   </tr>
                 </tbody>
               </table>
+            </div>
         </div>
+
         <div class="row mt-5 ml-1">
             Yesterday, 24-01-2020
         </div>
-        <div class="row mt-4">
-            <table class="table text-center">
+        <div class="row mt-4 pb-5">
+          <div class="col-12">
+            <table class="table text-center table-responsive-md">
                 <tbody>
                   <tr class="shadow">
                     <th scope="row"></th>
@@ -140,6 +159,7 @@
                   </tr>
                 </tbody>
               </table>
+            </div>
         </div>
     </div>
 </body>
