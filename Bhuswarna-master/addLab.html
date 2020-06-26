@@ -77,31 +77,47 @@
            .form-control{
               background-color: #F5F9FF;
            }
-           @media only screen and (max-width: 768px) {
+           @media only screen and (max-width: 600px) {
                /* For mobile phones: */
                   [class*="tas"] {
-                  font-size: 12px;
+                  font-size: 7px;
                   margin-right: 1px;
                   }
                }
+            @media (min-width: 600px) and (max-width: 992px){
+               [class*="tas"]{
+                  font-size: 13px;
+                  margin-right: 1px;
+               }
+            }
         </style>
     </head>
     <body>
-        <div class="container mt-sm-5">
+        <div class="container mt-lg-5">
             <div class="row">
-               <div class="col-xs-12 col-lg-2 rounded left-pane mt-sm-5 pb-3">
-                  <div class="col-sm-12 mt-3">
-                     <a class="left-items rounded" href="#">Dashboard</a>
-                     <div class="w-100"></div>
-                     <a class="left-items rounded" href="#">Tests and Labs</a>
-                     <div class="w-100"></div>
-                     <a class="left-items rounded" href="#">Phebotomist</a>
-                     <div class="w-100"></div>
-                     <div class="col-xs-12 col-lg-2">
-                     </div>
-                  </div>
+               <div class="col-12 col-lg-2 rounded left-pane mt-lg-5 pb-3 px-2 pt-2">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="nav flex-column">
+                            <li class="nav-item ">
+                                <a href="#" class="left-items"><div class="col-12 left-items rounded">Dashboard</div></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="left-items"><div class="col-12 mt-sm-1 left-items rounded">Tests and Labs</div></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="left-items"><div class="col-12 mt-sm-1 left-items rounded">Phebotomist</div></a>
+                            </li>
+                            </ul>
+                        </div>
+                    </nav>
                </div>
-               <div class="col-xs-12 col-lg-9">
+
+               <!-------------------------------------------------------------------------------------->
+               <div class="col-12 col-lg-9">
                   <nav class="navbar navbar-expand-sm navbar-dark titlebar">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
@@ -119,18 +135,20 @@
                       </ul>
                   </nav>
                   <div class="w-100"></div>
+
+                  <!------------------------------------------------------------------------------------>
                   <div class="row">
                      <div class="col-sm-12 ml-lg-3 right-pane rounded mt-n3">
-                        <div class="col-sm-7 tests-and-labs mt-3">
+                        <div class="col-12 col-lg-7 tests-and-labs mt-3 text-center text-lg-left">
                            <b>Tests and Labs</b>
                         </div>
-                        <div class="col-xs-12 col-lg-3 mt-lg-n4 ml-auto">
+                        <div class="col-12 col-lg-3 mt-lg-n4 ml-auto mt-3 mt-lg-0 text-center text-lg-left">
                            <a href="#"><svg aria-hidden="true" focusable="false" width=15px height=15px data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg></a>
                            <button class="btn btn-sm btn-warning rounded-pill create pl-4 pr-4">+ Create</button>
                         </div>
                         <div class="w-100"></div>
-                        <div class="col-sm-12 mt-4 ml-n3">
-                           <nav class="navbar navbar-expand-sm">
+                        <div class="col-12 mt-4 ml-lg-n3">
+                           <nav class="navbar navbar-expand-sm d-flex justify-content-center justify-content-md-start">
                               <ul class="nav nav-pills">
                                  <li class="active mr-lg-3"><a class="inner-bar" data-toggle="pill" href="#singleTests">Single Tests</a></li>
                                  <li class="mr-lg-3"><a class="inner-bar" data-toggle="pill" href="#profiles">Profiles</a></li>
@@ -140,9 +158,10 @@
                            </nav>
                            <hr class="inner-bar-line">
                         </div>
+                        
                         <div class="col-sm-12 border border-dark rounded mt-4 add-lab">
                            <div class="row">
-                              <div class="col-sm-12 mt-4 ml-3">
+                              <div class="col-12 col-sm-12 mt-4 ml-3">
                                  <b class="addLab">Add Lab</b>
                                  <hr>
                               </div>
@@ -171,7 +190,6 @@
                                  Lab Description
                                  <div class="w-100"></div>
                                  <textarea class="form-control rounded mt-2" rows="5" id="comment"></textarea>
-                                 
                               </div>
                            </div>
                         </div>
