@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Dr. Appointment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            background-color: #141B41;
+        }
+       .inner-bar-line{
+            margin-top: -10px;
+        }
+       .left-pane{
+             background-color: #FF8900;
+       }
+        .right-pane{
+            background-color: white;
+            color: #142B41;
+       }
+        .left-items:hover{
+            background-color: #141B41;
+            color: #fff;
+            text-decoration: none;
+            padding-right: 20px;
+        }
+        .titlebar{
+            background-color: #141B41;
+        }
+        .title-item{
+            margin-right: 30px; 
+            color: #fff;
+        }
+        .title-item:hover{
+            color: #fff;
+        }
+        .my-profile{
+            font-size: 38px;
+        }
+        .nav>li>.left-items{
+            color: black;
+        }
+        .nav>li>.innerNav{
+            color: black;
+          }
+        .clinic-address{
+            font-size: 12px;
+        }
+        .clinic-card{
+            width: 15rem;
+            height: 9rem;
+        }
+        hr{
+            height:0.5px;
+            border-width:0;
+            background-color:#000000;
+        }
+        .smallfont{
+            font-size: 12px;
+        }
+        ul.no_bullet {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li.innerul:before {    
+            font-family: 'FontAwesome';
+            content: '\f058';
+            margin:0 5px 0 -15px;
+        }
+        .blockedDates{
+            width: 5rem;
+            height: 6rem;
+            border-radius: 10px;
+        }
+        .dateBlock{
+            font-size: 18px;
+        }
+        .blockMonth{
+            font-size: 12px;
+        }
+        .blockDay{
+            font-size: 14px;
+        }
+        .rectangle{
+            height: 6rem;
+            width: 1rem;
+        }
+        .rectangle2{
+            height: 1rem;
+            width: 85%;
+        }
+        .rectangle3{
+            height: 1rem;
+            width: 90%;
+        }
+        .innerHeading{
+            font-size: 24px;
+        }
+        
+        ul {list-style-type: none;}
+        .month {
+            padding: 10px;
+            width: 100%;
+            background: #141B41;
+            text-align: center;
+            color: #fff;
+            font-size: 24px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .month ul {
+            margin: 0;
+            padding: 0;
+        }
+        .monthTable{
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 10px;
+        }
+        .activeInTable {
+            padding: 5px;
+            background: #B4D7FF;
+            border-radius: 50%;
+        }
+        @media screen and (max-width:720px) {
+            .weekdays li, .days li {width: 13.1%;}
+        }
+
+        @media screen and (max-width: 420px) {
+           .weekdays li, .days li {width: 12.5%;}
+           .days li .active {padding: 2px;}
+        }
+
+        @media screen and (max-width: 290px) {
+            .weekdays li, .days li {width: 12.2%;}
+        }
+        @media only screen and (max-width: 600px) {
+               /* For mobile phones: */
+                  [class*="tas"] {
+                  font-size: 7px;
+                  margin-right: 1px;
+                  }
+               }
+        @media (min-width: 600px) and (max-width: 992px){
+               [class*="tas"]{
+                  font-size: 13px;
+                  margin-right: 1px;
+               }
+            }
+    </style>
+</head>
+<body>
+    <div class="container mt-lg-5 mb-5">
+        <div class="row">
+            <div class="col-12 col-lg-2 rounded left-pane mt-lg-5 pb-3 px-2 pt-2">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav flex-column">
+                        <li class="nav-item ">
+                            <a href="#" class="left-items"><div class="col-12 left-items rounded">Dashboard</div></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="left-items"><div class="col-12 mt-sm-1 left-items rounded">Doctors</div></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="left-items"><div class="col-12 mt-sm-1 left-items rounded">Customers</div></a>
+                        </li>
+                        </ul>
+                    </div>
+                </nav>
+           </div>
+
+           <!---------------------------------------------------------------------------------------------->
+           <div class="col-12 col-lg-9">
+                <nav class="navbar navbar-expand-sm navbar-dark titlebar">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link title-item tas" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link title-item tas" id="diagnostics-tab" data-toggle="tab" href="#diagnostics" role="tab" aria-controls="diagnotics" aria-selected="false">DIAGNOSTICS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active title-item tas" id="appointment-tab" data-toggle="tab" href="#appointment" role="tab" aria-controls="appointment" aria-selected="false">Dr. APPOINTMENT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link title-item tas" id="pharmaceutical-tab" data-toggle="tab" href="#pharmaceutical" role="tab" aria-controls="pharmaceutical" aria-selected="false">PHARMACEUTICAL</a>
+                    </li>
+                    </ul>
+                </nav>
+                <div class="w-100"></div>
+
+                <!------------------------------------------------------------------------------------------->
+                <div class="row">
+                    <div class="col-sm-12 ml-lg-3 right-pane rounded mt-n3">
+                        <div class="row ml-1 mt-5">
+                            <div class="col-12 text-center text-lg-left">
+                                <p class="my-profile"><b>Profile</b></p>
+                            </div>
+                        </div>
+                
+                        <!------------------------------------------------------------------------------------------------>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item " role="presentation">
+                                      <a class="nav-link innerNav" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">My details</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                      <a class="nav-link active innerNav" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">My clinic</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                
+                        <!--------------------------------------------------------------------------------------------------->
+                        <div class="tab-content mb-5" id="myTabContent">
+                            <div class="tab-pane fade show active border border-top-0 px-4" role="tabpanel" aria-labelledby="content-tab">
+                                <div class="row pb-5">
+                                    <div class="col-12">
+                                        <div class="row mt-5">
+                                            <div class="col-12 col-md-2 text-center text-lg-left innerHeading">
+                                                Clinics
+                                            </div>
+                                        </div>
+                                        <div class="row mb-5">
+                                            <div class="col col-lg-3 mt-4">
+                                                <div class="card border border main-part clinic-card">
+                                                    <div class="card-body">
+                                                    <h5 class="card-title">Dona Medicos Clinic</h5>
+                                                    <p class="card-text mt-4 clinic-address">Sector 9, Bara khamba road, Park avenue near panwel, Dadar,Assam</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-3 mt-4 ml-lg-5">
+                                                <div class="card border border main-part clinic-card">
+                                                    <div class="card-body">
+                                                    <h5 class="card-title">Quary Clinic</h5>
+                                                    <p class="card-text mt-4 clinic-address">Sector 9, khawre road, Bikas park down street near panwel, sawui,Assam</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-3 mt-4 ml-lg-5">
+                                                <div class="card border border main-part clinic-card">
+                                                    <div class="card-body">
+                                                    <h5 class="card-title">Dento Medical</h5>
+                                                    <p class="card-text mt-4 clinic-address">Sector 9, khawre road, Bikas park down street near panwel, sawui,Assam</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 ml-4 pr-5">
+                                                <hr>
+                                            </div>
+                                        </div>
+                
+                                        <!--------------------------------------------------------------------------------------------->
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-12 col-lg-7 ml-lg-4 mt-4 text-center text-lg-left">
+                                                        <p class="innerHeading">Absence Settings</p>
+                                                        <ul class="no_bullet ml-4 mt-4">
+                                                            <li class="innerul text-left">In case you are unavailable, you can block the date for no appointments.</li>
+                                                            <li class="innerul mt-2 text-left">Provide the date(s) and clinics in which we will not be available.</li>
+                                                            <li class="innerul mt-2 text-left">Provide the reason that will let your patients and clinic know about your leave.</li>
+                                                        </ul>
+                                                    </div>
+                
+                                                    <div class="col-12 col-md-7 mx-md-auto col-lg-4 mt-4 mt-lg-4">
+                                                        <div class="month">      
+                                                            <ul>
+                                                            <li>March</li>
+                                                            </ul>
+                                                        </div>
+                                                        <table class="smallfont table table-sm table-borderless monthTable">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><div class="text-center">Sun</div></td>
+                                                                    <td><div class="text-center">Mon</div></td>
+                                                                    <td><div class="text-center">Tue</div></td>
+                                                                    <td><div class="text-center">Wed</div></td>
+                                                                    <td><div class="text-center">Thu</div></td>
+                                                                    <td><div class="text-center">Fri</div></td>
+                                                                    <td><div class="text-center">Sat</div></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><div class="text-center"></div></td>
+                                                                    <td><div class="text-center"></div></td>
+                                                                    <td><div class="text-center">01</div></td>
+                                                                    <td><div class="text-center">02</div></td>
+                                                                    <td><div class="text-center">03</div></td>
+                                                                    <td><div class="text-center">04</div></td>
+                                                                    <td><div class="text-center">05</div></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><div class="text-center">06</div></td>
+                                                                    <td><div class="text-center">07</div></td>
+                                                                    <td><div class="text-center">08</div></td>
+                                                                    <td class="activeInTable"><div class="text-center">09</div></td>
+                                                                    <td><div class="text-center">10</div></td>
+                                                                    <td><div class="text-center">11</div></td>
+                                                                    <td><div class="text-center">12</div></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><div class="text-center">13</div></td>
+                                                                    <td><div class="text-center">14</div></td>
+                                                                    <td><div class="text-center">15</div></td>
+                                                                    <td><div class="text-center">16</div></td>
+                                                                    <td><div class="text-center">17</div></td>
+                                                                    <td><div class="text-center">18</div></td>
+                                                                    <td><div class="text-center">19</div></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><div class="text-center">20</div></td>
+                                                                    <td><div class="text-center">21</div></td>
+                                                                    <td><div class="text-center">22</div></td>
+                                                                    <td><div class="text-center">23</div></td>
+                                                                    <td><div class="text-center">24</div></td>
+                                                                    <td><div class="text-center">25</div></td>
+                                                                    <td><div class="text-center">26</div></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><div class="text-center">27</div></td>
+                                                                    <td><div class="text-center">28</div></td>
+                                                                    <td><div class="text-center">29</div></td>
+                                                                    <td><div class="text-center">30</div></td>
+                                                                    <td><div class="text-center"></div></td>
+                                                                    <td><div class="text-center"></div></td>
+                                                                    <td><div class="text-center"></div></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>                 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!--------------------------------------------------------------------------------------->
+                                        <div class="row mt-5 ml-lg-3 mb-5 text-center text-lg-left">
+                                            <div class="col-12">
+                                                <p class="innerHeading text-center text-lg-left">My blocked dates</p>
+                                                <div class="row mt-4 justify-content-center justify-content-lg-start ml-2 ml-sm-5 ml-md-0">
+                                                    <div class="col-5 col-md-2 col-lg-2 ml-lg-0">
+                                                        <div class="card border-0 shadow blockedDates">
+                                                            <div class="card-body">
+                                                            <p class="card-text mt-n2 text-muted text-center blockMonth">March</p>
+                                                            <p class="card-text mt-n3 text-center dateBlock">27</p>
+                                                            <p class="text-muted mt-n3 text-center blockDay">Sun</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-5 col-md-2 col-lg-2 ml-lg-n3">
+                                                        <div class="card border-0 shadow blockedDates">
+                                                            <div class="card-body">
+                                                            <p class="card-text mt-n2 text-muted text-center blockMonth">April</p>
+                                                            <p class="card-text mt-n3 text-center dateBlock">01</p>
+                                                            <p class="text-muted mt-n3 text-center blockDay">Fri</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-5 col-md-2 col-lg-2 mt-4 mt-md-0 ml-lg-n3">
+                                                        <div class="card border-0 shadow blockedDates">
+                                                            <div class="card-body">
+                                                            <p class="card-text mt-n2 text-muted text-center blockMonth">April</p>
+                                                            <p class="card-text mt-n3 text-center dateBlock">02</p>
+                                                            <p class="text-muted mt-n3 text-center blockDay">Sat</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-5 col-md-2 col-lg-2 mt-4 mt-md-0 ml-lg-n3">
+                                                        <div class="card border-0 shadow blockedDates">
+                                                            <div class="card-body">
+                                                            <p class="card-text mt-n2 text-muted text-center blockMonth">April</p>
+                                                            <p class="card-text mt-n3 text-center dateBlock">03</p>
+                                                            <p class="text-muted mt-n3 text-center blockDay">Sun</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col col-md-1 d-none d-md-block">
+                                                        <div class="rectangle border border-dark border-left-0"></div>
+                                                    </div>
+                                                    <div class="col-12 d-md-none d-sm-block d-none">
+                                                        <div class="rectangle2 border border-dark border-top-0"></div>
+                                                    </div>
+                                                    <div class="col-12 d-sm-none d-block">
+                                                        <div class="rectangle3 border border-dark border-top-0"></div>
+                                                    </div>
+                                                    <div class="col-12 col-md-2 col-lg-2 ml-n5 ml-md-n3">
+                                                        <p class="blockMonth mt-4">Clinic name</p>
+                                                        <p class="blockMonth">Reason</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                
+                                        <div class="row mt-n3">
+                                            <div class="col-12 ml-4 pr-5">
+                                                <hr>
+                                            </div>
+                                        </div>
+                
+                                        <!---------------------------------------------------------------------------------------------->
+                                        <div class="row mt-4 ml-lg-4 mb-5 pb-5">
+                                            <div class="col-12">
+                                                <p class="innerHeading text-center text-lg-left">Other Settings</p>
+                                                <div class="row">
+                                                    <div class="col-10 col-lg-8">
+                                                        <p>Allow clinic to send you invitation. </p>
+                                                    </div>
+                                                    <div class="col-1 col-md-1 ml-md-auto">
+                                                        <div class="custom-control custom-switch">
+                                                            <input type="checkbox" class="custom-control-input" id="customSwitches1">
+                                                            <label class="custom-control-label" for="customSwitches1"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
