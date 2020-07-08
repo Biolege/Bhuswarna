@@ -6,23 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <style>
         body{
             position: relative;
-            font-family: Nunito;
+            font-family: 'Nunito Sans';
             align-items: center;
-            color: #141B41;
+        }
+        .outer-card{
+            border-radius: 10px;
+            box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
         }
         hr{
             height:0.5px;
             border-width:0;
             background-color:#EBEBEB;
         }
-        .card{
+        .inner-card{
             width: 18rem;
+            border-radius: 5px;
+        }
+        .rectangle{
+            width: 242px;
+            height: 163px;
+            background: #FFFFFF;
+            box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .corner {
+            width: 0; 
+            height: 0; 
+            border-top: 67px solid #0076FF;
+            border-bottom: 75px solid transparent;
+            border-right: 75px solid transparent;
+            position: absolute;
+        }
+        .recommend{
+            font-size: 10px;
+            width: 120px;
+            transform: rotate(-42deg);
+            color: #fff;
         }
         .next{
             background-color: #141B41;
+            background-color: #FF8900;
+            
         }
         .btn{
             color: #fff;
@@ -33,34 +65,35 @@
     </style>
   </head>
 <body>
-    <div class="container my-5 shadow p-3 mb-5 bg-white rounded">
-        <div class="row mt-2 mb-n3">
-            <div class="col text-center text-lg-left"><h3>Select Laboratory</h3></div>
-        </div>
-        <hr>
-        <div class="row my-5 pb-5">
-            <div class="col col-lg-2 offset-1 offset-sm-2 offset-lg-0">
-                <div class="card text-center">
-                    <img class="card-img-top" src="..." alt="Card image cap">
-                    <div class="card-body">
-                      <h6 class="card-title">Laboratory Name</h6>
-                      <p class="card-text">Price</p>
+    <div class="container my-5 p-3 mb-5 bg-white rounded">
+        <div class="row">
+            <div class="col-12">
+                <div class="card border-0 outer-card">
+                    <div class="row mt-2 mb-n3">
+                        <div class="col text-center text-lg-left"><h3>Select Laboratory</h3></div>
+                    </div>
+                    <hr>
+                    <div class="row my-5 pb-5">
+                        <div class="col col-lg-3 offset-0 offset-lg-1">
+                            <div class="rectangle mx-auto"></div>
+                            <p class="text-center mt-4">Laboratory Name</p>
+                            <p class="text-center">Price</p>
+                        </div>
+                        <div class="col col-lg-3 ml-lg-4 justify-content-center">
+                            <div class="rectangle mx-auto">
+                                <div class="corner"></div>
+                                <div class="recommend ml-n2">Recommended</div>
+                            </div>
+                            <p class="text-center mt-4">Laboratory Name</p>
+                            <p class="text-center">Price</p>
+                        </div>   
+                    </div>
+                    <div class="row">
+                        <div class="col-3 col-sm-2 col-lg-1 text-center ml-auto mr-3 mt-5 justify-content-end rounded-pill next">
+                            <div type="button" class="btn btn-sm justify-content-end border-0" >Next</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col col-lg-2 offset-sm-2 mt-4 mt-lg-0 offset-1">
-                <div class="card text-center">
-                    <img class="card-img-top" src="..." alt="Card image cap">
-                    <div class="card-body">
-                      <h6 class="card-title">Laboratory Name</h6>
-                      <p class="card-text">Price</p>
-                    </div>
-                 </div>
-            </div>   
-        </div>
-        <div class="row">
-            <div class="col-3 col-sm-2 col-lg-1 text-center ml-auto mr-3 mt-5 justify-content-end rounded-pill next">
-                <div type="button" class="btn btn-sm justify-content-end border-0" >Next</div>
             </div>
         </div>
     </div>
