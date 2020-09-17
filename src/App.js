@@ -7,7 +7,7 @@ import Stock from './components/stock_warning';
 function App() {
  return (
     <div>
-      <div class="wrapper">
+      <div className="wrapper">
 
         <nav id="sidebar">
 
@@ -66,36 +66,35 @@ function App() {
 
         <div id="content">
           <nav className="navbar navbar-expand navbar-light">
-                <div class="container-fluid">
+                <div className="container-fluid">
 
-                <button type="button" id="sidebarCollapse" class="btn mt-n2">
-                        <svg aria-hidden="true" focusable="false" height="25px" width="25px" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>      
-                    </button>
-                    <div className="container">
-                    
-                        <a href="/#" className="heading home mr-auto d-none d-md-block"><h2>Home</h2></a>
-                        <div>
-                            <ul className="navbar-nav ml-auto">
-                                <li className="nav-item active">
-                                    <a className="nav-link" href="/#"><div className="circle"></div></a>
-                                </li>
-                                <li className="nav-item active">
-                                    <a className="nav-link" href="/#"><p className="px16">Pharmacy Name</p>
-                                    <p className="mt-n3 px12">Extra name if any</p></a>
-                                </li>
-                                <li className="vl mx-2"></li>
-                                <li className="nav-item active">
-                                    <a className="nav-link" href="/#"><p className="heading">Logo</p></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                  <button type="button" id="sidebarCollapse" class="btn mt-n2">
+                          <svg aria-hidden="true" focusable="false" height="25px" width="25px" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>      
+                  </button>
+                  <a href="/#" className="heading home mr-auto d-none d-md-block"><h2>Home</h2></a>
+                  <div>
+                    <ul className="navbar-nav ml-auto">
+                        <li className="nav-item active">
+                            <a className="nav-link" href="/#"><div className="circle"></div></a>
+                        </li>
+                        <li className="nav-item active">
+                            <a className="nav-link" href="/#"><p className="px16">Pharmacy Name</p>
+                            <p className="mt-n3 px12">Extra name if any</p></a>
+                        </li>
+                        <li className="vl mx-2"></li>
+                        <li className="nav-item active">
+                            <a className="nav-link" href="/#"><p className="heading">Logo</p></a>
+                        </li>
+                    </ul>
+                  </div>
                 </div>
-            </nav>
+          </nav>
             
 
-            <div className="container-fluid">
-                <div className="row">
+            <div className="container-fluid mb-5">
+
+
+              <div className="row ml-md-2">
                   <div className="col-12">
                     <p className="heading">Create Billing</p>
                   </div>
@@ -105,9 +104,8 @@ function App() {
                   <div className="col-lg-6 mt-3 mt-lg-0">
                     <BillingCard title="Create online order" content="Deliver medicine at footstep" />
                   </div>
-                </div>
 
-                <div className="row">
+
                   <div className="col-12 mt-4">
                     <p className="heading">Today</p>
                   </div>
@@ -120,9 +118,8 @@ function App() {
                   <div className="col-lg-4 mt-3 mt-lg-0">
                     <Today title="Meds varieties sold" amount="Rs. 120"></Today>
                   </div>
-                </div>
 
-                <div className="row">
+
                   <div className="col-12 mt-5">
                     <p className="heading">Last checkouts</p>
                   </div>
@@ -135,9 +132,9 @@ function App() {
                   <div className="col-lg-4 mt-3 mt-lg-0">
                     <Last name="Abhinash Bora" amount="Rs. 456" timestamp="09:00am"></Last>
                   </div>
-                </div>
 
-                <div className="row">
+
+
                   <div className="col-12 mt-5">
                     <p className="heading">Last Online Orders</p>
                   </div>
@@ -150,9 +147,9 @@ function App() {
                   <div className="col-lg-4 mt-3 mt-lg-0">
                     <Last name="Abhinash Bora" amount="Rs. 456" timestamp="09:00am"></Last>
                   </div>
-                </div>
 
-                <div className="row">
+
+
                   <div className="col-12 mt-5">
                     <p className="heading">Stock Warning</p>
                   </div>
@@ -165,9 +162,9 @@ function App() {
                   <div className="col-lg-4 mt-3 mt-lg-0">
                   <Stock medicine="Paracetamol" company="Company name" units="2 units left" distributor="Biolege meds"></Stock>
                   </div>
-                </div>
 
-                <div className="row mb-5">
+
+
                   <div className="col-12 mt-5">
                       <p className="heading">Analytics</p>
                     </div>
@@ -180,10 +177,8 @@ function App() {
                     <div className="col-lg-4 mt-3 mt-lg-0">
                       <Last name="New customer" amount="Rs. 456" timestamp="09:00am"></Last>
                     </div>
-
               </div>
             </div>
-            
           </div>
     </div>
 

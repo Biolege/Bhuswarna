@@ -59,7 +59,7 @@
 }
 
 #sidebar.active {
-  margin-left: -250px;
+  margin-left:-100px;
 }
 a[data-toggle="collapse"] {
   position: relative;
@@ -137,6 +137,7 @@ ul ul a {
  margin-top: 5px;
   
 }
+
 
 .activeIcon {
   background-color: #FF8900;
