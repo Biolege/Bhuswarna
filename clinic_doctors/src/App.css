@@ -1,0 +1,117 @@
+.App {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: normal;
+  }
+.backOrange{
+  background-color: #FF8900;
+}
+.colorWhite{
+  color: #fff;
+}
+
+.home{
+  color: black;
+}
+.card{
+  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.heading{
+  font-size: 28px;
+}
+.name{
+  font-size: 18px;
+}
+.company{
+  font-size: 20px;
+}
+.units{
+  color: #FF0202;
+}
+.orderButton{
+  color: white;
+  background-color: #FF8900;
+}
+.orderButton:hover{
+  color: white;
+  background-color: #FF8900;
+}
+.circle {
+  background-color:  #fff;
+  border-radius: 50%;
+  height:63px;
+  width:63px;
+}
+.px18{
+  font-size: 18px;
+}
+.px16{
+  font-size:16px;
+}
+.px12{
+  font-size: 12px;
+}
+.vl{
+  border-left: 1px solid #fff;
+  height: 58px;
+}
+
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: white;
+}
+.icons{
+  background-color: #141B41;
+  color: #FFF;
+  border-radius: 50%;
+  border: none;
+  padding: 10px;
+}
+.icons1{
+ background-color: #FF8900;
+  color: #FFF;
+  border-radius: 50%;
+  border: none;
+  padding: 10px;
+}
+.icons-text{
+  font-size: 14px;
+  color: #141B41;
+ margin-top: 5px;
+  
+}
+.shad{
+  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.1);
+}
+.bordrup{
+   border-radius: 10px;
+}
+
+
+.activeIcon {
+  background-color: #FF8900;
+}
+
+.smallCircleBlack{
+  background-color:  #C4C4C4;
+  border-radius: 50%;
+  height:39px;
+  width:39px;
+}
+.colorGreen{
+  color: #02BD7A;
+}
+
+.tableRowShadow{
+  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.05);
+}
+
+.tableCircle{
+  background-color:  #C4C4C4;
+  border-radius: 50%;
+  width: 28px;
+  height: 29px;
+}
