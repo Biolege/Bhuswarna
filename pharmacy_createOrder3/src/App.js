@@ -1,12 +1,7 @@
 import React from 'react';
 import './App.css';
-import Analytics from './components/Analytics';
-import GetReport from './components/get_report';
-import MonthlyRevenue from './components/monthly_revenue';
-import Order from './components/order.js';
-
-const BlankCard = () => <div className="card border-0" style={{height:'9rem'}}></div>
-
+import Cart from './components/Cart';
+import SearchMedicine from './components/SearchMedicine';
 
 function App() {
  return (
@@ -17,13 +12,13 @@ function App() {
 
             <ul className="list-unstyled components text-center">
                 <li >
-                    <button className="icons">
+                    <button className="icons ">
                       <svg aria-hidden="true" width="25px" height="25px" focusable="false" data-prefix="fas" data-icon="home" class="svg-inline--fa fa-home fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg>
                     </button>
                     <div className="iconstext">Home</div>
                 </li>
                 <li className="mt-4">
-                    <button className="icons">
+                    <button className="icons activeIcon">
                       <svg aria-hidden="true" focusable="false" width="25px" height="25px" data-prefix="fas" data-icon="file-medical-alt" class="svg-inline--fa fa-file-medical-alt fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M288 136V0H88C74.7 0 64 10.7 64 24v232H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h140.9c3 0 5.8 1.7 7.2 4.4l19.9 39.8 56.8-113.7c2.9-5.9 11.4-5.9 14.3 0l34.7 69.5H352c8.8 0 16 7.2 16 16s-7.2 16-16 16h-89.9L240 275.8l-56.8 113.7c-2.9 5.9-11.4 5.9-14.3 0L134.1 320H64v168c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H312c-13.2 0-24-10.8-24-24zm153-31L343.1 7c-4.5-4.5-10.6-7-17-7H320v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg>
                     </button>
                     <div className="iconstext">Orders</div>
@@ -41,7 +36,7 @@ function App() {
                   <div className="iconstext">Notification</div> 
                 </li>
                 <li className="mt-4">
-                  <button className="icons activeIcon">
+                  <button className="icons">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" width="25px" height="25px" data-icon="chart-bar" class="svg-inline--fa fa-chart-bar fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M332.8 320h38.4c6.4 0 12.8-6.4 12.8-12.8V172.8c0-6.4-6.4-12.8-12.8-12.8h-38.4c-6.4 0-12.8 6.4-12.8 12.8v134.4c0 6.4 6.4 12.8 12.8 12.8zm96 0h38.4c6.4 0 12.8-6.4 12.8-12.8V76.8c0-6.4-6.4-12.8-12.8-12.8h-38.4c-6.4 0-12.8 6.4-12.8 12.8v230.4c0 6.4 6.4 12.8 12.8 12.8zm-288 0h38.4c6.4 0 12.8-6.4 12.8-12.8v-70.4c0-6.4-6.4-12.8-12.8-12.8h-38.4c-6.4 0-12.8 6.4-12.8 12.8v70.4c0 6.4 6.4 12.8 12.8 12.8zm96 0h38.4c6.4 0 12.8-6.4 12.8-12.8V108.8c0-6.4-6.4-12.8-12.8-12.8h-38.4c-6.4 0-12.8 6.4-12.8 12.8v198.4c0 6.4 6.4 12.8 12.8 12.8zM496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"></path></svg>
                   </button>
                   <div className="iconstext">Analytics</div> 
@@ -71,11 +66,11 @@ function App() {
         <div id="content">
           <nav className="navbar navbar-expand navbar-light">
                 <div className="container-fluid">
-                  <div className="row">
+
                   <button type="button" id="sidebarCollapse" class="btn mt-n2">
                           <svg aria-hidden="true" focusable="false" height="25px" width="25px" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>      
                   </button>
-                  <a href="/#" className="heading home mr-auto d-none d-md-block"><h2>Analytics</h2></a>
+                  <a href="/#" className="heading home mr-auto d-none d-md-block"><h2>Orders</h2></a>
                   <div>
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item active">
@@ -92,115 +87,23 @@ function App() {
                     </ul>
                   </div>
                 </div>
-                </div>
           </nav>
             
 
             <div className="container-fluid mb-5">
 
 
-              <div className="row ml-md-2 mt-5">
-                  <div className="col-12 col-sm-7">
-                    <p className="heading">Daily analytics</p>
-                  </div>
-                  <div className="col-12 col-sm-4 ml-sm-auto">
-                    <p className="px24 text-md-right">
-                      <svg aria-hidden="true" focusable="false" data-prefix="far" height="25px" width="25px" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                        <path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"></path>
-                      </svg> July 27, 2020
-                    </p>
-                  </div>
-                  <div className="col-lg-4">
-                    <Analytics title="Revenue" />
-                  </div>
-                  <div className="col-lg-4 mt-3 mt-lg-0">
-                    <Analytics title="Profit" />
-                  </div>
-                  <div className="col-lg-4 mt-3 mt-lg-0">
-                    <Analytics title="Meds varieties sold" />
-                  </div>
-                  <div className="col-lg-4 mt-lg-4 mt-3">
-                    <Analytics title="Customers on shop" />
-                  </div>
-                  <div className="col-lg-4 mt-lg-4 mt-3">
-                    <Analytics title="Online orders" />
-                  </div>
-                  <div className="col-lg-4 mt-lg-4 mt-3">
-                    <Analytics title="Employees present" />
-                  </div>
-                  <div className="col-lg-4 mt-lg-4 mt-3">
-                    <Analytics title="Discount to patients" />
-                  </div>
-                  <div className="col-lg-4 mt-lg-4 mt-3">
-                    <Analytics title="Total discount amount" />
-                  </div>
-                  <div className="col-lg-4 mt-lg-4 mt-3">
-                    <Analytics title="New" />
-                  </div>
+              <div className="row ml-md-2">
+                <div className="col-12">
+                  <p className="heading">Billing</p>
+                </div>
+                <div className="col-lg-6 mt-lg-3">
+                  <SearchMedicine/>
+                </div>
+                <div className="col-lg-6 mt-lg-3">
+                  <Cart/>
+                </div>
 
-
-                  <div className="col-12 mt-5">
-                    <GetReport />
-                  </div>
-
-                  
-                  <div className="col-12 mt-4">
-                    <p className="heading">Monthly revenue</p>
-                  </div>
-                  
-
-                  <div className="col-12">
-                    <MonthlyRevenue />
-                  </div>
-
-
-                  <div className="col-12 mt-4">
-                    <p className="heading">Monthly profit</p>
-                  </div>
-                  
-
-                  <div className="col-12">
-                    <BlankCard />
-                  </div>
-
-
-                  <div className="col-12 mt-4">
-                    <p className="heading">Recurring customers</p>
-                  </div>
-                  
-
-                  <div className="col-12">
-                    <BlankCard />
-                  </div>
-
-
-                  <div className="col-12 mt-4">
-                    <p className="heading">New customers</p>
-                  </div>
-                  
-
-                  <div className="col-12">
-                    <BlankCard />
-                  </div>
-
-
-                  <div className="col-12 mt-4">
-                    <p className="heading">Order</p>
-                  </div>
-
-
-                  <div className="col-12">
-                    <Order />
-                  </div>
-
-
-              
-              
-              
-              
-              
-              
-              
               </div>
             </div>
           </div>
