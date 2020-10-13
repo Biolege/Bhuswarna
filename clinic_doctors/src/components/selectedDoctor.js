@@ -1,5 +1,4 @@
 import React from 'react';
-import docAvail from './docAvail';
 
 function selectedDoctor(props) {
     return (

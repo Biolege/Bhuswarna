@@ -21,9 +21,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-
-#incomplete files
-/biolegeDiagnostics_new1
-/pharmacy_medsSold
-/test
