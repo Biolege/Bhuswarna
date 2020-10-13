@@ -1,0 +1,138 @@
+.App {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: normal;
+  }
+
+
+  .form-control{
+    border-radius: 50px;
+  }
+    .has-PIN .form-control {
+padding-left: 2.375rem;
+border-color: #141B41;
+}
+
+.has-PIN .form-control-feedback {
+position: absolute;
+z-index: 2;
+display: block;
+width: 2.375rem;
+height: 2.375rem;
+line-height: 2.375rem;
+text-align: center;
+pointer-events: none;
+color: #141B41;
+}
+.input-group-text{
+         background-color: #fff;
+         border-radius: 1000px;
+         border-color: #141B41;
+  }
+
+
+.bordr{
+      border-color: #141B41;
+  }
+.circle1{
+       background-color: #C4C4C4; 
+        width: 150px; 
+        height: 150px;
+   }
+.text{
+padding: 40px;
+}
+.border {
+border-width:2px !important;
+}
+.btn-dark{
+background-color: #141B41;
+font-size: 12px;
+}
+.btn-outline-secondary{
+padding-left: 30px;
+padding-right: 30px;
+}
+.btn-outline-secondary:hover{
+background-color: white;
+}
+.btn-warning{
+background-color: #FF8900;
+font-size: 12px;
+}
+
+
+
+.week{
+  background: #FFFFFF;
+  border-radius: 5px;
+  color: #0076FF;
+  font-weight: 600;
+  margin-right: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.days:hover{
+  color: #0076FF;
+}
+.wednesday{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.friday{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.timing-1{
+  font-size: 11px;
+  color: rgb(10, 202, 10);
+}
+.timing-2{
+  font-size: 11px;
+  color: red;
+}
+.small-table{
+  border-collapse: separate;
+  border-spacing: 3px 0 ;
+}
+.small-btntext{
+  font-size: 10px;
+}
+.shad{
+  border-radius: 10px;
+  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.151);
+}
+@media only screen and (max-width: 768px) {
+           /* For mobile phones: */
+              .drpdn {
+              margin-top: 15px;
+              }
+              .search-icon{
+                margin-right: 100px;
+              }
+              .space{
+                  margin-top: 30px;
+              }
+              .Available{
+                  margin-top: 30px;
+                  margin-left: -100px;
+              }
+              .heading2{
+                  font-size: 30px;
+              }
+           }
+
+
+
+.slot-time{
+  border-collapse: separate;
+  border-spacing: 12px 0 ;
+}
+.totd{
+  color: #000000;
+}
+.circle2{
+  background-color: #C4C4C4; 
+   width: 10px; 
+   height: 10px;
+}
