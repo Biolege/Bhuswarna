@@ -1,0 +1,60 @@
+.App {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: normal;
+  }
+
+.card{
+  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.heading{
+  font-size: 34px;
+}
+.px24{
+  font-size:24px;
+}
+.px18{
+  font-size: 18px;
+}
+.wt600{
+  font-weight: 600;
+}
+
+.rect{
+  background-color: #c4c4c4;
+  width: 159px;
+  height: 63px;
+}
+
+.addBtn{
+  background-color: #141b41;
+  color: #fff;
+}
+.addBtn:hover{
+  background-color: #141b41;
+  color: #fff;
+}
+
+hr{
+  height:0.5px;
+  border-width:0;
+  background-color:#c4c4c4;
+}
+
+.colorGreen{
+  color: #0BA323;
+
+}
+.colorGreen:hover{
+  color:#08A323;
+}
+
+.buttonGrey{
+  background-color:grey;
+  color:#fff;
+}
+.buttonGrey:hover{
+  background-color: grey;
+  color:#fff;
+}
