@@ -1,0 +1,150 @@
+.my-profile {
+  font-size: 38px;
+}
+.nav > li > a {
+  color: black;
+}
+.clinic-address {
+  font-size: 12px;
+}
+.clinic-card {
+  width: 18rem;
+  height: 9rem;
+}
+hr {
+  height: 0.5px;
+  border-width: 0;
+  background-color: #000000;
+}
+.smallfont {
+  font-size: 12px;
+}
+ul.no_bullet {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+li.innerul:before {
+  font-family: "FontAwesome";
+  content: "\f058";
+  margin: 0 5px 0 -15px;
+}
+.blockedDates {
+  width: 5rem;
+  height: 6rem;
+  border-radius: 10px;
+}
+.dateBlock {
+  font-size: 18px;
+}
+.blockMonth {
+  font-size: 12px;
+}
+.blockDay {
+  font-size: 14px;
+}
+.rectangle {
+  height: 6rem;
+  width: 1rem;
+}
+.rectangle2 {
+  height: 1rem;
+  width: 85%;
+}
+.rectangle3 {
+  height: 1rem;
+  width: 90%;
+}
+.innerHeading {
+  font-size: 24px;
+}
+
+ul {
+  list-style-type: none;
+}
+.month {
+  padding: 10px;
+  width: 100%;
+  background: #141b41;
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 10px 10px 0 0;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+.monthTable {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+}
+.activeInTable {
+  padding: 5px;
+  background: #b4d7ff;
+  border-radius: 50%;
+}
+@media screen and (max-width: 720px) {
+  .weekdays li,
+  .days li {
+    width: 13.1%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li,
+  .days li {
+    width: 12.5%;
+  }
+  .days li .active {
+    padding: 2px;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li,
+  .days li {
+    width: 12.2%;
+  }
+}
+.icons {
+  color: #141b41;
+  background-color: #fff;
+  border: none;
+  padding: 5px;
+}
+.icons:hover {
+  color: #ff8900;
+}
+.icons1 {
+  background-color: #fff;
+  color: #ff8900;
+  border: none;
+  padding: 5px;
+}
+.icons-text {
+  font-size: 14px;
+  color: #141b41;
+  margin-top: 5px;
+  font-weight: 500;
+}
+.icons-text:hover {
+  color: #ff8900;
+}
+.icons-text1 {
+  font-size: 14px;
+  color: #ff8900;
+  margin-top: 5px;
+  font-weight: 500;
+}
+.shad {
+  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.1);
+}
+.bordrup {
+  border-radius: 10px;
+}
+body {
+  transform: scale(0.89, 0.89);
+}

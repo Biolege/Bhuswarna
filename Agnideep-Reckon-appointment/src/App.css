@@ -1,0 +1,177 @@
+.bordr {
+  border-color: #141b41;
+}
+
+.circle1 {
+  background-color: #c4c4c4;
+  width: 150px;
+  height: 150px;
+}
+
+.text {
+  padding: 40px;
+}
+
+.border {
+  border-width: 2px !important;
+}
+
+.btn-dark {
+  background-color: #141b41;
+  font-size: 12px;
+}
+
+.btn-outline-secondary {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.btn-outline-secondary:hover {
+  background-color: white;
+}
+
+.btn-warning {
+  background-color: #ff8900;
+  font-size: 12px;
+}
+
+.week {
+  background: #ffffff;
+  border-radius: 5px;
+  color: #0076ff;
+  font-weight: 600;
+  margin-right: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.days:hover {
+  color: #0076ff;
+}
+
+.wednesday {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.friday {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.timing-1 {
+  font-size: 11px;
+  color: rgb(10, 202, 10);
+}
+
+.timing-2 {
+  font-size: 11px;
+  color: red;
+}
+
+.small-table {
+  border-collapse: separate;
+  border-spacing: 3px 0;
+}
+
+.small-btntext {
+  font-size: 10px;
+}
+
+.shad {
+  border-radius: 10px;
+  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.151);
+}
+
+/*Dummy Img Size*/
+.img-fluid {
+  height: 150px;
+  border-radius: 100%;
+  display: flex;
+}
+
+.bb {
+  border-bottom: 3px solid black;
+}
+
+.lb {
+  border-left: 1px solid black;
+}
+
+.clinic-btn {
+  background: #ffffff;
+  border-radius: 5px;
+  border: 2px solid #e5e5e5;
+  font-weight: 600;
+  margin-right: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#slotAvailable {
+  display: none;
+}
+
+.slot-time {
+  border-collapse: separate;
+  border-spacing: 12px 0;
+}
+
+.btn-time {
+  border-radius: 5px;
+}
+
+.totd {
+  color: #000000;
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  .drpdn {
+    margin-top: 15px;
+  }
+
+  .search-icon {
+    margin-right: 100px;
+  }
+
+  .space {
+    margin-top: 30px;
+  }
+
+  .Available {
+    margin-top: 30px;
+    margin-left: -100px;
+  }
+
+  .heading2 {
+    font-size: 20px;
+  }
+
+  .img-fluid {
+    height: 60px;
+    border-radius: 100%;
+  }
+
+  .doc-details {
+    font-size: 12px;
+  }
+
+  .Doc-name {
+    font-size: 14px;
+  }
+
+  .bb {
+    font-size: 12px;
+  }
+
+  .lb {
+    font-size: 12px;
+  }
+
+  .btn-block-xs-only {
+    display: block;
+    width: 100%;
+    border-radius: 0px;
+  }
+}
